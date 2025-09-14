@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +58,33 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Whimsy Custom Colors
+        forest: {
+          deep: "hsl(var(--forest-deep))",
+          light: "hsl(var(--forest-light))",
+        },
+        gold: {
+          warm: "hsl(var(--gold-warm))",
+          light: "hsl(var(--gold-light))",
+        },
+        indigo: {
+          deep: "hsl(var(--indigo-deep))",
+          light: "hsl(var(--indigo-light))",
+        },
+        ivory: "hsl(var(--ivory))",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-warm": "var(--gradient-warm)",
+        "gradient-forest": "var(--gradient-forest)",
+      },
+      boxShadow: {
+        "magical": "var(--shadow-magical)",
+        "warm": "var(--shadow-warm)",
+        "soft": "var(--shadow-soft)",
+      },
+      transitionTimingFunction: {
+        "bounce-gentle": "var(--bounce-gentle)",
       },
       borderRadius: {
         lg: "var(--radius)",
