@@ -173,7 +173,9 @@ const Partnerships = () => {
           </h1>
           <p className="text-xl text-ivory/90 max-w-4xl mx-auto mb-8">
             At Whimsy Films, transformation happens when vision meets collaboration. We are building 
-            a movement powered by governments, NGOs, cultural institutions, and forward-thinking sponsors.
+            a movement powered by governments, NGOs, cultural institutions, and forward-thinking sponsors. 
+            By partnering with us, you step into a global conversation about how culture and conservation 
+            can work together to shape the future.
           </p>
           
           <blockquote className="text-2xl font-serif italic text-gold-warm mb-8">

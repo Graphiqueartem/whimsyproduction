@@ -167,6 +167,23 @@ const About = () => {
                   Folklore is more than entertainment. It is the ancestral memory of humankind, 
                   carrying lessons on how to coexist with the environment, how to navigate social 
                   harmony, and how to find meaning in times of uncertainty. At Whimsy Films, we 
+                  treat folklore as a vital resource for sustainability education. By connecting 
+                  stories with pressing issues like climate change, biodiversity, and cultural 
+                  preservation, we reframe folklore as a tool for empowerment. Through our work, 
+                  heritage is not frozen in time but activated as a force for present and future change.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="mt-12 bg-gradient-hero border-0">
+              <CardContent className="p-8 text-white">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Why Folklore & Sustainability?
+                </h3>
+                <p>
+                  Folklore is more than entertainment. It is the ancestral memory of humankind, 
+                  carrying lessons on how to coexist with the environment, how to navigate social 
+                  harmony, and how to find meaning in times of uncertainty. At Whimsy Films, we 
                   treat folklore as a vital resource for sustainability education.
                 </p>
               </CardContent>

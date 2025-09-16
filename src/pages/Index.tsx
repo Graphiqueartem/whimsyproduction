@@ -89,12 +89,24 @@ const Index = () => {
               storytelling to life — to inspire children, empower communities, and protect our natural world.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
               <Button variant="warm" size="xl" asChild>
                 <Link to="/vision">Discover Our Vision</Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <Button variant="warm" size="lg" asChild>
+                <Link to="/vision">Discover Our Vision</Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+                <Link to="/partnerships">Partner With Us</Link>
+              </Button>
+              <Button variant="magical" size="lg" asChild>
+                <Link to="/get-involved">Join the Movement</Link>
               </Button>
             </div>
 
@@ -139,13 +151,10 @@ const Index = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="default" size="lg" asChild>
-                  <Link to="/productions">Watch Our Films</Link>
+                  <Link to="/partnerships">Explore Partnerships</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/partnerships">Partner With Us</Link>
-                </Button>
-                <Button variant="secondary" size="lg" asChild>
-                  <Link to="/get-involved">Join the Journey</Link>
+                  <Link to="/get-involved">Register Your Interest</Link>
                 </Button>
               </div>
             </div>
@@ -154,12 +163,50 @@ const Index = () => {
               <Card className="border-0 shadow-soft bg-gradient-warm">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold text-forest-deep mb-4">
-                    We tell magical stories that protect nature and inspire generations.
+                    Stories That Change the World
+                  </h3>
+                  <p className="text-forest-deep/80 mb-4">
+                    At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. 
+                    Stories have taught us who we are, connected us across cultures, and inspired generations to dream.
+                  </p>
+                  <p className="text-forest-deep/80 mb-4">
+                    Today, stories must do more. They must remind us of our shared humanity, protect the fragile 
+                    beauty of wildlife, and spark empathy in a divided world.
+                  </p>
+                  <p className="text-forest-deep/80">
+                    That is why Whimsy Films exists. We are a UK-based production company that creates films, 
+                    series, and cultural experiences rooted in folklore and magical storytelling — designed not 
+                    only to entertain but also to educate, conserve, and inspire global action.
+                  </p>
+                  <div className="mt-6 p-4 bg-forest-deep/10 rounded-lg">
+                    <p className="text-forest-deep font-semibold text-center">
+                      "We tell magical stories that protect nature and inspire generations."
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                    <Button variant="default" size="sm" asChild>
+                      <Link to="/productions">Watch Our Films</Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link to="/partnerships">Partner With Us</Link>
+                    </Button>
+                    <Button variant="secondary" size="sm" asChild>
+                      <Link to="/get-involved">Join the Journey</Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-soft bg-gradient-forest">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-semibold text-forest-deep mb-4">
+                    Our Production House
                   </h3>
                   <p className="text-forest-deep/80">
                     Our production house blends film, theatre, puppetry, and AI innovation. 
                     Our work celebrates folklore, protects wildlife, and inspires the imaginations 
-                    of children and adults alike.
+                    of children and adults alike. From Africa to Asia, from Europe to the Americas, 
+                    we bring magical stories to life — and invite the world to join us.
                   </p>
                 </CardContent>
               </Card>
@@ -195,8 +242,23 @@ const Index = () => {
             </h2>
             <p className="text-xl text-ivory/90 leading-relaxed">
               We are not simply a film studio. We are building a global cultural platform 
-              where every production acts as a catalyst for positive change.
+              where every production:
             </p>
+            <ul className="mt-6 space-y-3 text-lg text-ivory/90">
+              <li>• Acts as a soft power tool for governments to showcase their cultural heritage.</li>
+              <li>• Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection.</li>
+              <li>• Supports education systems, offering engaging, curriculum-linked cultural resources.</li>
+              <li>• Creates new economic opportunities in creative industries, tourism, and cultural exchange.</li>
+            </ul>
+            <p className="mt-6 text-xl text-ivory/90 leading-relaxed">
+              For investors, governments, and NGOs, Whimsy Films represents a rare opportunity:
+            </p>
+            <ul className="mt-4 space-y-3 text-lg text-ivory/90">
+              <li>• To align with a high-growth creative sector with strong audience demand.</li>
+              <li>• To co-own a positive cultural legacy with measurable social and environmental impact.</li>
+              <li>• To access global distribution networks (streaming, festivals, education platforms).</li>
+              <li>• To partner in shaping the future of inclusive, impactful children's media.</li>
+            </ul>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

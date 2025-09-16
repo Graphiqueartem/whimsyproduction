@@ -119,12 +119,12 @@ const Productions = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
-                <Film className="h-12 w-12 text-primary mx-auto mb-4" />
+                <Camera className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-forest-deep mb-3">
-                  Cinematic Excellence
+                  Wildlife Cinematography
                 </h3>
                 <p className="text-muted-foreground">
-                  Festival-quality production values with international distribution potential
+                  Capturing the raw wonder of the natural world
                 </p>
               </CardContent>
             </Card>
@@ -133,10 +133,22 @@ const Productions = () => {
               <CardContent className="p-8">
                 <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-forest-deep mb-3">
-                  Emotional Resonance
+                  Puppetry & Practical Artistry
                 </h3>
                 <p className="text-muted-foreground">
-                  Stories that move audiences and create lasting emotional connections
+                  Timeless, tactile, beloved by children
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-8">
+                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                  Live Action & Human Performance
+                </h3>
+                <p className="text-muted-foreground">
+                  Authentic, emotional, deeply relatable
                 </p>
               </CardContent>
             </Card>
@@ -145,22 +157,10 @@ const Productions = () => {
               <CardContent className="p-8">
                 <Sparkles className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-forest-deep mb-3">
-                  Technical Innovation
+                  AI-enhanced Visuals & Innovation
                 </h3>
                 <p className="text-muted-foreground">
-                  AI-enhanced visuals that support rather than replace artisanal craftsmanship
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-8">
-                <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
-                  Global Impact
-                </h3>
-                <p className="text-muted-foreground">
-                  Content designed for educational, diplomatic, and conservation applications
+                  Expanding creative possibilities
                 </p>
               </CardContent>
             </Card>

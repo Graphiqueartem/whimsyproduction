@@ -28,7 +28,7 @@ const GetInvolved = () => {
       description: "Bring your folklore to life and showcase cultural heritage on the global stage.",
       benefits: ["Cultural diplomacy tool", "National story preservation", "International visibility", "Tourism promotion"],
       cta: "Partner With Us",
-      ctaLink: "/partnerships#governments"
+      ctaLink: "/partnerships"
     },
     {
       icon: <Heart className="h-10 w-10" />,
@@ -36,7 +36,7 @@ const GetInvolved = () => {
       description: "Turn your cause into a story that moves hearts and inspires global action.",
       benefits: ["Amplified mission reach", "Emotional storytelling", "Community engagement", "Donor inspiration"],
       cta: "Amplify Your Mission",
-      ctaLink: "/partnerships#ngos"
+      ctaLink: "/partnerships"
     },
     {
       icon: <GraduationCap className="h-10 w-10" />,
@@ -44,7 +44,7 @@ const GetInvolved = () => {
       description: "Open your classrooms to magic and learning through folklore-based resources.",
       benefits: ["Curriculum enhancement", "Global classroom connections", "Cultural literacy", "Conservation education"],
       cta: "Join Education Network",
-      ctaLink: "/partnerships#education"
+      ctaLink: "/partnerships"
     },
     {
       icon: <Gift className="h-10 w-10" />,
@@ -52,7 +52,7 @@ const GetInvolved = () => {
       description: "Be part of a cinematic legacy that protects wildlife and celebrates culture.",
       benefits: ["Meaningful impact investment", "Global brand visibility", "CSR excellence", "Legacy building"],
       cta: "Explore Sponsorship",
-      ctaLink: "/partnerships#investors"
+      ctaLink: "/partnerships"
     },
     {
       icon: <Camera className="h-10 w-10" />,
@@ -60,7 +60,7 @@ const GetInvolved = () => {
       description: "Collaborate on the stories of tomorrow through puppetry, film, and digital innovation.",
       benefits: ["Creative collaboration", "Global platform", "Cultural preservation", "Innovation showcase"],
       cta: "Join Creative Network",
-      ctaLink: "/partnerships#media"
+      ctaLink: "/partnerships"
     }
   ];
 
@@ -112,7 +112,7 @@ const GetInvolved = () => {
             <p className="text-2xl font-serif italic text-gold-warm">
               "This is more than film. More than folklore. More than puppetry. 
               This is a movement. A global journey where culture and creativity 
-              unite to protect nature and inspire young minds."
+              unite to protect nature and inspire young minds. Will you join us?"
             </p>
           </div>
           
@@ -183,11 +183,12 @@ const GetInvolved = () => {
                   Not Sure Which Partnership is Right?
                 </h3>
                 <p className="text-forest-deep/80 mb-6">
-                  We believe partnership begins with conversation. Let's discuss your goals 
-                  and explore how we can create meaningful collaboration.
+                  We believe partnership begins with conversation. Whimsy Films collaborates globally, 
+                  and we invite dialogue with governments, NGOs, cultural organisations, and individuals 
+                  who share our mission. If our vision resonates with you, we want to hear from you.
                 </p>
                 <Button variant="default" size="lg" asChild>
-                  <Link to="/contact">Start a Conversation</Link>
+                  <Link to="/contact">Contact Us to Start a Partnership</Link>
                 </Button>
               </CardContent>
             </Card>

@@ -72,8 +72,15 @@ const Vision = () => {
               </p>
               
               <p>
-                Our values guide every decision, every partnership, and every story we tell:
+                Our values guide every decision:
               </p>
+              <ul className="space-y-2 mt-4">
+                <li><strong>Imagination:</strong> wonder is the seed of empathy and action.</li>
+                <li><strong>Respect:</strong> cultural and ecological authenticity.</li>
+                <li><strong>Innovation:</strong> technology without losing artistry.</li>
+                <li><strong>Collaboration:</strong> co-created with governments, NGOs, educators, and communities.</li>
+                <li><strong>Impact:</strong> every project contributes to cultural, social, and environmental good.</li>
+              </ul>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -114,35 +121,10 @@ const Vision = () => {
               
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  Stories are more than entertainment. They are humanity's oldest technology 
-                  for passing down wisdom, building empathy, and inspiring action. Throughout 
-                  history, stories have:
-                </p>
-                
-                <ul className="space-y-3 list-none">
-                  <li className="flex items-start gap-3">
-                    <BookOpen className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Preserved cultural wisdom across generations</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Heart className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Built bridges between different communities and cultures</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Inspired social movements and positive change</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <TreePine className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span>Connected us to the natural world and its creatures</span>
-                  </li>
-                </ul>
-                
-                <p>
-                  At Whimsy Films, we use this power intentionally, turning folklore and wildlife 
-                  storytelling into platforms for education, diplomacy, and conservation. We believe 
-                  that in our interconnected world, stories must do more than entertain — they must 
-                  heal, unite, and protect.
+                  Stories are more than entertainment. They pass down cultural wisdom, shape 
+                  childhood imagination, build empathy, and inspire societal change. Whimsy Films 
+                  uses this power intentionally, turning folklore and wildlife storytelling into 
+                  platforms for education, diplomacy, and conservation.
                 </p>
               </div>
             </div>
@@ -189,9 +171,10 @@ const Vision = () => {
             
             <div className="text-xl text-ivory/90 space-y-6 mb-12">
               <p>
-                We envision a world where every child grows up with stories that reflect their 
-                culture, where families discover films that are both entertaining and enriching, 
-                and where storytelling becomes a powerful tool for global cooperation.
+                We envision a future where children everywhere grow up with stories representing their 
+                cultures, where families discover films that are entertaining yet enriching, and where 
+                governments and NGOs use our productions as cultural diplomacy tools and awareness campaigns. 
+                Conservation efforts are amplified by stories that make the natural world unforgettable.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
@@ -249,7 +232,7 @@ const Vision = () => {
               </div>
             </div>
 
-            <Button variant="warm" size="xl" asChild>
+            <Button variant="hero" size="xl" asChild>
               <Link to="/partnerships">Be Part of This Future</Link>
             </Button>
           </div>

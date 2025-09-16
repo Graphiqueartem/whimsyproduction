@@ -121,6 +121,10 @@ const Impact = () => {
             Every Whimsy Films project is designed with dual impact: to enchant audiences 
             and to make a measurable difference in cultural preservation, wildlife conservation, and education.
           </p>
+          <p className="text-lg text-ivory/80 max-w-3xl mx-auto">
+            Every nation has stories of animals, spirits, and heroes. These tales connect us to the earth. 
+            We transform them into cinematic experiences that children and families everywhere can treasure.
+          </p>
           <div className="max-w-3xl mx-auto">
             <img 
               src={conservationImage}
