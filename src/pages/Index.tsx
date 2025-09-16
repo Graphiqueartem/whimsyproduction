@@ -118,29 +118,21 @@ const Index = () => {
       </section>
 
       {/* Expanded Intro Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold text-forest-deep leading-tight">
                 Stories That Change the World
               </h2>
               
-              <div className="text-lg text-muted-foreground space-y-4">
-                <p>
-                  At Whimsy Films, we see culture as a living archive of human imagination—and 
-                  a tool for shaping a more sustainable tomorrow. Through film, exhibitions, 
-                  festivals, and collaborations, we connect communities, governments, and cultural institutions.
-                </p>
+              <div className="text-lg text-muted-foreground space-y-6">
+                <p>At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.</p>
                 
-                <p>
-                  We do not just tell stories; we curate experiences that move audiences, spark 
-                  conversations, and inspire change. By weaving together folklore and conservation, 
-                  we make environmental action personal, emotional, and unforgettable.
-                </p>
+                <p>We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.</p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button variant="default" size="lg" asChild>
                   <Link to="/partnerships">Explore Partnerships</Link>
                 </Button>
@@ -150,31 +142,21 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               <Card className="border-0 shadow-soft bg-gradient-warm">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-forest-deep mb-4">
-                    Stories That Change the World
-                  </h3>
-                  <p className="text-forest-deep/80 mb-4">
-                    At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. 
-                    Stories have taught us who we are, connected us across cultures, and inspired generations to dream.
-                  </p>
-                  <p className="text-forest-deep/80 mb-4">
-                    Today, stories must do more. They must remind us of our shared humanity, protect the fragile 
-                    beauty of wildlife, and spark empathy in a divided world.
-                  </p>
-                  <p className="text-forest-deep/80">
-                    That is why Whimsy Films exists. We are a UK-based production company that creates films, 
-                    series, and cultural experiences rooted in folklore and magical storytelling — designed not 
-                    only to entertain but also to educate, conserve, and inspire global action.
-                  </p>
-                  <div className="mt-6 p-4 bg-forest-deep/10 rounded-lg">
-                    <p className="text-forest-deep font-semibold text-center">
+                  <h3 className="text-xl font-semibold text-forest-deep mb-6">Our Mission</h3>
+                  <div className="space-y-4 text-forest-deep/80">
+                    <p>At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.</p>
+                    <p>Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.</p>
+                    <p>That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.</p>
+                  </div>
+                  <div className="mt-8 p-6 bg-forest-deep/10 rounded-lg">
+                    <p className="text-forest-deep font-semibold text-center text-lg">
                       "We tell magical stories that protect nature and inspire generations."
                     </p>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-8">
                     <Button variant="default" size="sm" asChild>
                       <Link to="/productions">Watch Our Films</Link>
                     </Button>
@@ -190,29 +172,22 @@ const Index = () => {
 
               <Card className="border-0 shadow-soft bg-gradient-forest">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-forest-deep mb-4">
-                    Our Production House
-                  </h3>
-                  <p className="text-forest-deep/80">
-                    Our production house blends film, theatre, puppetry, and AI innovation. 
-                    Our work celebrates folklore, protects wildlife, and inspires the imaginations 
-                    of children and adults alike. From Africa to Asia, from Europe to the Americas, 
-                    we bring magical stories to life — and invite the world to join us.
-                  </p>
+                  <h3 className="text-xl font-semibold text-forest-deep mb-6">Our Production House</h3>
+                  <p className="text-forest-deep/80 leading-relaxed">Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike. From Africa to Asia, from Europe to the Americas, we bring magical stories to life — and invite the world to join us.</p>
                 </CardContent>
               </Card>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 {features.map((feature, index) => (
                   <Card key={index} className="border border-forest-light/30 hover:shadow-soft transition-all duration-300">
                     <CardContent className="p-6 text-center">
-                      <div className="text-forest-deep mb-3 flex justify-center">
+                      <div className="text-forest-deep mb-4 flex justify-center">
                         {feature.icon}
                       </div>
-                      <h4 className="font-semibold text-sm text-forest-deep mb-2">
+                      <h4 className="font-semibold text-sm text-forest-deep mb-3 leading-tight">
                         {feature.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground">
+                      <p className="text-xs text-muted-foreground leading-relaxed">
                         {feature.description}
                       </p>
                     </CardContent>
@@ -225,78 +200,76 @@ const Index = () => {
       </section>
 
       {/* Why Whimsy Films Matters */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-forest-deep text-ivory">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Whimsy Films Matters
-            </h2>
-            <p className="text-xl text-ivory/90 leading-relaxed">
-              We are not simply a film studio. We are building a global cultural platform 
-              where every production:
-            </p>
-            <ul className="mt-6 space-y-3 text-lg text-ivory/90">
-              <li>• Acts as a soft power tool for governments to showcase their cultural heritage.</li>
-              <li>• Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection.</li>
-              <li>• Supports education systems, offering engaging, curriculum-linked cultural resources.</li>
-              <li>• Creates new economic opportunities in creative industries, tourism, and cultural exchange.</li>
-            </ul>
-            <p className="mt-6 text-xl text-ivory/90 leading-relaxed">
-              For investors, governments, and NGOs, Whimsy Films represents a rare opportunity:
-            </p>
-            <ul className="mt-4 space-y-3 text-lg text-ivory/90">
-              <li>• To align with a high-growth creative sector with strong audience demand.</li>
-              <li>• To co-own a positive cultural legacy with measurable social and environmental impact.</li>
-              <li>• To access global distribution networks (streaming, festivals, education platforms).</li>
-              <li>• To partner in shaping the future of inclusive, impactful children's media.</li>
-            </ul>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-ivory/10 border-ivory/20 hover:bg-ivory/15 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-gold-warm mb-4 flex justify-center">
-                    {benefit.icon}
+      <section className="py-16 lg:py-24 bg-forest-deep text-ivory">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8">Why Whimsy Films Matters</h2>
+              <p className="text-xl text-ivory/90 leading-relaxed mb-8">We are not simply a film studio. We are building a global cultural platform where every production:</p>
+              
+              <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-lg text-ivory/90">Acts as a soft power tool for governments to showcase their cultural heritage</p>
                   </div>
-                  <h3 className="font-semibold text-ivory mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-ivory/80">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center space-y-6">
-            <div className="text-lg text-ivory/90 max-w-3xl mx-auto">
-              <p className="mb-4">
-                For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to 
-                align with a high-growth creative sector while creating measurable social and environmental impact.
-              </p>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-lg text-ivory/90">Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-lg text-ivory/90">Supports education systems, offering engaging, curriculum-linked cultural resources</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-lg text-ivory/90">Creates new economic opportunities in creative industries, tourism, and cultural exchange</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="warm" size="lg" asChild>
-                <Link to="/impact">Discover Our Impact</Link>
-              </Button>
-              <Button variant="magical" size="lg" asChild>
-                <Link to="/partnerships">Partner With Us</Link>
-              </Button>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {benefits.map((benefit, index) => (
+                <Card key={index} className="bg-ivory/10 border-ivory/20 hover:bg-ivory/15 transition-all duration-300">
+                  <CardContent className="p-8 text-center">
+                    <div className="text-gold-warm mb-6 flex justify-center">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="font-semibold text-ivory mb-3 text-lg">{benefit.title}</h3>
+                    <p className="text-sm text-ivory/80 leading-relaxed">{benefit.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <p className="text-xl text-ivory/90 leading-relaxed mb-8 max-w-4xl mx-auto">For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to align with a high-growth creative sector while creating measurable social and environmental impact.</p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="warm" size="lg" asChild>
+                  <Link to="/impact">Discover Our Impact</Link>
+                </Button>
+                <Button variant="magical" size="lg" asChild>
+                  <Link to="/partnerships">Partner With Us</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Home Sub-Sections */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-warm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-gradient-warm">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
-                <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">Our Mission</h3>
-                <p className="text-muted-foreground mb-4">
-                  Creating films that celebrate folklore, protect wildlife, and inspire global action.
-                </p>
+                <BookOpen className="h-12 w-12 text-primary mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-forest-deep mb-4">Our Mission</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">Creating films that celebrate folklore, protect wildlife, and inspire global action.</p>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/vision">Read Our Mission</Link>
                 </Button>
@@ -305,11 +278,9 @@ const Index = () => {
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
-                <Target className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">Our Impact</h3>
-                <p className="text-muted-foreground mb-4">
-                  Measurable conservation, cultural, educational and economic outcomes.
-                </p>
+                <Target className="h-12 w-12 text-primary mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-forest-deep mb-4">Our Impact</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">Measurable conservation, cultural, educational and economic outcomes.</p>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/impact">Explore Our Impact</Link>
                 </Button>
@@ -318,11 +289,9 @@ const Index = () => {
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
-                <Film className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">Our Approach</h3>
-                <p className="text-muted-foreground mb-4">
-                  Blending puppetry, wildlife, AI, and folklore into magical storytelling.
-                </p>
+                <Film className="h-12 w-12 text-primary mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-forest-deep mb-4">Our Approach</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">Blending puppetry, wildlife, AI, and folklore into magical storytelling.</p>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/productions">Discover Our Approach</Link>
                 </Button>
@@ -331,11 +300,9 @@ const Index = () => {
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
-                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">Digital Archives</h3>
-                <p className="text-muted-foreground mb-4">
-                  Preserving cultural heritage through modern storytelling technology.
-                </p>
+                <Shield className="h-12 w-12 text-primary mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-forest-deep mb-4">Digital Archives</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">Preserving cultural heritage through modern storytelling technology.</p>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/about">Explore the Archive Project</Link>
                 </Button>
@@ -346,17 +313,13 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-forest-deep mb-6">
-              Join the Global Movement
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Every story matters. Every partnership creates change. Every action protects our future.
-            </p>
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-forest-deep mb-8">Join the Global Movement</h2>
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">Every story matters. Every partnership creates change. Every action protects our future.</p>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
