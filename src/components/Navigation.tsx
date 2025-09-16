@@ -10,12 +10,22 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Menu, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const location = useLocation();
+
+  const toggleDropdown = (title: string) => {
+    setOpenDropdowns(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title)
+        : [...prev, title]
+    );
+  };
 
   const navigationItems = [
     { title: "Home", href: "/" },
@@ -69,7 +79,7 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -137,30 +147,39 @@ const Navigation = () => {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
-              <div className="flex flex-col space-y-4 mt-8">
+            <SheetContent side="right" className="w-80 overflow-y-auto">
+              <div className="flex flex-col space-y-2 mt-8 px-2">
                 {navigationItems.map((item) => (
                   <div key={item.title}>
                     {item.items ? (
-                      <div className="space-y-2">
-                        <div className="font-semibold text-forest-deep">{item.title}</div>
-                        <div className="ml-4 space-y-2">
+                      <Collapsible 
+                        open={openDropdowns.includes(item.title)}
+                        onOpenChange={() => toggleDropdown(item.title)}
+                      >
+                        <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-forest-deep py-2 hover:text-primary transition-colors">
+                          {item.title}
+                          <ChevronDown className={cn(
+                            "h-4 w-4 transition-transform duration-200",
+                            openDropdowns.includes(item.title) && "rotate-180"
+                          )} />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="pl-4 space-y-1 pb-2">
                           {item.items.map((subItem) => (
                             <Link
                               key={subItem.href}
                               to={subItem.href}
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
                               onClick={() => setIsOpen(false)}
                             >
                               {subItem.title}
                             </Link>
                           ))}
-                        </div>
-                      </div>
+                        </CollapsibleContent>
+                      </Collapsible>
                     ) : (
                       <Link
                         to={item.href}
-                        className="block font-medium text-foreground hover:text-primary transition-colors"
+                        className="block font-medium text-foreground hover:text-primary transition-colors py-2"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.title}
@@ -168,7 +187,7 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4">
+                <div className="pt-4 border-t border-border">
                   <Button variant="hero" size="lg" className="w-full" asChild>
                     <Link to="/partnerships" onClick={() => setIsOpen(false)}>
                       Partner With Us

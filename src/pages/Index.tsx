@@ -77,7 +77,7 @@ const Index = () => {
           }}
         />
         
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Where Storytelling
@@ -89,23 +89,14 @@ const Index = () => {
               storytelling to life — to inspire children, empower communities, and protect our natural world.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
               <Button variant="warm" size="xl" asChild>
                 <Link to="/vision">Discover Our Vision</Link>
               </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button variant="warm" size="lg" asChild>
-                <Link to="/vision">Discover Our Vision</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
-                <Link to="/partnerships">Partner With Us</Link>
-              </Button>
-              <Button variant="magical" size="lg" asChild>
+              <Button variant="magical" size="xl" asChild>
                 <Link to="/get-involved">Join the Movement</Link>
               </Button>
             </div>
@@ -119,7 +110,7 @@ const Index = () => {
 
       {/* Inspirational Quote Divider */}
       <section className="py-16 bg-gradient-forest">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="text-3xl md:text-4xl font-serif italic text-forest-deep max-w-4xl mx-auto">
             "Every tradition is a story. Every story is a bridge to the future."
           </blockquote>
@@ -127,8 +118,8 @@ const Index = () => {
       </section>
 
       {/* Expanded Intro Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-forest-deep leading-tight">
@@ -234,8 +225,8 @@ const Index = () => {
       </section>
 
       {/* Why Whimsy Films Matters */}
-      <section className="py-20 bg-forest-deep text-ivory">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-forest-deep text-ivory">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Whimsy Films Matters
@@ -296,8 +287,8 @@ const Index = () => {
       </section>
 
       {/* Home Sub-Sections */}
-      <section className="py-20 bg-gradient-warm">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-warm">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-8">
@@ -355,8 +346,8 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-forest-deep mb-6">
               Join the Global Movement
@@ -365,7 +356,7 @@ const Index = () => {
               Every story matters. Every partnership creates change. Every action protects our future.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
