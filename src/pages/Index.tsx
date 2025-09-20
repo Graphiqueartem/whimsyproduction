@@ -17,7 +17,10 @@ import {
   GraduationCap,
   Film
 } from "lucide-react";
-import eagleHero from "@/assets/videos/eagle-hero.jpg";
+import heroMain from "@/assets/hero-main.jpg";
+import culturalPuppetry from "@/assets/cultural-puppetry.jpg";
+import culturalStorytelling1 from "@/assets/cultural-storytelling-1.jpg";
+import culturalStorytelling2 from "@/assets/cultural-storytelling-2.jpg";
 import turtleConservation from "@/assets/videos/turtle-conservation.jpg";
 import pandaCloseup from "@/assets/videos/panda-closeup.jpg";
 import lionSavanna from "@/assets/videos/lion-savanna.jpg";
@@ -78,7 +81,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${eagleHero})`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${heroMain})`
           }}
         />
         
@@ -114,20 +117,20 @@ const Index = () => {
       </section>
 
       {/* Inspirational Quote Divider */}
-      <section className="py-2 bg-gradient-forest">
+      <section className="py-3 bg-gradient-forest">
         <div className="container mx-auto px-2 text-center">
-          <blockquote className="text-base sm:text-lg font-serif italic text-forest-deep max-w-3xl mx-auto">
+          <blockquote className="text-sm sm:text-base font-serif italic text-forest-deep max-w-3xl mx-auto">
             "Every tradition is a story. Every story is a bridge to the future."
           </blockquote>
         </div>
       </section>
 
-      {/* Expanded Intro Section */}
-      <section className="py-3 bg-background">
+      {/* Compact Intro Section */}
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-2">
-          <div className="grid lg:grid-cols-2 gap-4 items-start">
-            <div className="space-y-3">
-              <h2 className="text-xl sm:text-2xl font-bold text-forest-deep">
+          <div className="grid lg:grid-cols-2 gap-3 items-start">
+            <div className="space-y-2">
+              <h2 className="text-lg sm:text-xl font-bold text-forest-deep">
                 Stories That Change the World
               </h2>
               
@@ -137,7 +140,7 @@ const Index = () => {
                 <p>We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.</p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-2 pt-1">
+              <div className="flex flex-col sm:flex-row gap-2 pt-2">
                 <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/partnerships">Explore Partnerships</Link>
                 </Button>
@@ -145,36 +148,59 @@ const Index = () => {
                   <Link to="/get-involved">Register Your Interest</Link>
                 </Button>
               </div>
+            </div>
 
-              {/* Wildlife Gallery */}
-              <div className="grid grid-cols-2 gap-2 pt-2">
+            <div className="space-y-2">
+              {/* Cultural Theatre Images */}
+              <div className="grid grid-cols-2 gap-2">
                 <div className="relative overflow-hidden rounded-lg aspect-video">
                   <img 
-                    src={chimpanzeePortrait} 
-                    alt="Wildlife conservation - Chimpanzee portrait showing intelligence and emotion"
+                    src={culturalPuppetry} 
+                    alt="Cultural puppetry and storytelling performance with children"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video">
                   <img 
-                    src={zebraGrassland} 
-                    alt="Wildlife in natural habitat - Zebra in grassland"
+                    src={culturalStorytelling1} 
+                    alt="Traditional cultural storytelling and theatre performance"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-3">
-              {/* Wildlife Videos Section */}
-              <div className="grid md:grid-cols-3 gap-2 mb-3">
+      {/* Video Content Section */}
+      <section className="py-4 bg-gradient-warm">
+        <div className="container mx-auto px-2">
+          <div className="grid lg:grid-cols-2 gap-3 items-center">
+            <div className="space-y-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-forest-deep">Our Production House</h3>
+              <p className="text-forest-deep/80 leading-relaxed text-sm">Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike.</p>
+              
+              <div className="flex flex-col gap-2 pt-2">
+                <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
+                  <Link to="/productions">Watch Our Films</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
+                  <Link to="/partnerships">Partner With Us</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              {/* Wildlife Videos */}
+              <div className="grid grid-cols-3 gap-2">
                 <video 
                   src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
                   autoPlay 
                   muted 
                   loop
                   playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft"
+                  className="w-full h-16 object-cover rounded-lg shadow-soft"
                 />
                 <video 
                   src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
@@ -182,7 +208,7 @@ const Index = () => {
                   muted 
                   loop
                   playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft"
+                  className="w-full h-16 object-cover rounded-lg shadow-soft"
                 />
                 <video 
                   src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
@@ -190,149 +216,166 @@ const Index = () => {
                   muted 
                   loop
                   playsInline
-                  className="w-full h-24 object-cover rounded-lg shadow-soft"
+                  className="w-full h-16 object-cover rounded-lg shadow-soft"
                 />
               </div>
-
-              {/* Praying Mantis Video */}
-              <div className="relative overflow-hidden rounded-lg aspect-video mb-4 lg:mb-6">
+              
+              <div className="relative overflow-hidden rounded-lg aspect-video">
                 <img 
                   src={turtleConservation} 
                   alt="Ocean conservation - Sea turtle swimming with fish"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent flex items-end">
-                  <div className="p-3 sm:p-4 text-white">
-                    <h3 className="text-base sm:text-lg font-semibold mb-1">Conservation Through Storytelling</h3>
+                  <div className="p-3 text-white">
+                    <h4 className="text-sm font-semibold mb-1">Conservation Through Storytelling</h4>
                     <p className="text-xs opacity-90">Protecting marine life through powerful narratives</p>
                   </div>
                 </div>
-              </div>
-
-              <Card className="border-0 shadow-soft bg-gradient-warm">
-                <CardContent className="p-4 lg:p-6">
-                  <h3 className="text-base sm:text-lg font-semibold text-forest-deep mb-3 lg:mb-4">Our Mission</h3>
-                  <div className="space-y-2 sm:space-y-3 text-forest-deep/80 text-xs sm:text-sm">
-                    <p>At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.</p>
-                    <p>Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.</p>
-                    <p>That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.</p>
-                  </div>
-                  <div className="mt-4 lg:mt-6 p-3 lg:p-4 bg-forest-deep/10 rounded-lg">
-                    <p className="text-forest-deep font-semibold text-center text-sm sm:text-base">
-                      "We tell magical stories that protect nature and inspire generations."
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-2 mt-4 lg:mt-6">
-                    <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
-                      <Link to="/productions">Watch Our Films</Link>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
-                      <Link to="/partnerships">Partner With Us</Link>
-                    </Button>
-                    <Button variant="secondary" size="sm" asChild className="w-full sm:w-auto">
-                      <Link to="/get-involved">Join the Journey</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-soft bg-gradient-forest">
-                <CardContent className="p-6 lg:p-8">
-                  <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-4 lg:mb-6">Our Production House</h3>
-                  <p className="text-forest-deep/80 leading-relaxed mb-4 lg:mb-6 text-sm sm:text-base">Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike. From Africa to Asia, from Europe to the Americas, we bring magical stories to life — and invite the world to join us.</p>
-                  
-                  {/* Production Showcase Images */}
-                  <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                    <div className="relative overflow-hidden rounded-md aspect-video">
-                      <img 
-                        src={lionSavanna} 
-                        alt="African wildlife - Majestic lion in savanna"
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                    </div>
-                    <div className="relative overflow-hidden rounded-md aspect-video">
-                      <img 
-                        src={pandaCloseup} 
-                        alt="Asian wildlife - Giant panda in bamboo forest"
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="grid grid-cols-2 gap-3 sm:gap-6">
-                {features.map((feature, index) => (
-                  <Card key={index} className="border border-forest-light/30 hover:shadow-soft transition-all duration-300">
-                    <CardContent className="p-4 sm:p-6 text-center">
-                      <div className="text-forest-deep mb-3 sm:mb-4 flex justify-center">
-                        {feature.icon}
-                      </div>
-                      <h4 className="font-semibold text-xs sm:text-sm text-forest-deep mb-2 sm:mb-3 leading-tight">
-                        {feature.title}
-                      </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Whimsy Films Matters */}
-      <section className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-forest-deep text-ivory">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8">Why Whimsy Films Matters</h2>
-              <p className="text-lg sm:text-xl text-ivory/90 leading-relaxed mb-6 sm:mb-8 px-2">We are not simply a film studio. We are building a global cultural platform where every production:</p>
-              
-              <div className="grid md:grid-cols-2 gap-6 sm:gap-8 text-left max-w-4xl mx-auto">
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-base sm:text-lg text-ivory/90">Acts as a soft power tool for governments to showcase their cultural heritage</p>
+      {/* Mission Section with Cultural Images */}
+      <section className="py-4 bg-background">
+        <div className="container mx-auto px-2">
+          <div className="grid lg:grid-cols-2 gap-3 items-start">
+            <div className="space-y-2">
+              <Card className="border-0 shadow-soft bg-gradient-warm">
+                <CardContent className="p-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-forest-deep mb-2">Our Mission</h3>
+                  <div className="space-y-2 text-forest-deep/80 text-xs sm:text-sm">
+                    <p>At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.</p>
+                    <p>Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-base sm:text-lg text-ivory/90">Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection</p>
+                  <div className="mt-3 p-3 bg-forest-deep/10 rounded-lg">
+                    <p className="text-forest-deep font-semibold text-center text-sm">
+                      "We tell magical stories that protect nature and inspire generations."
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative overflow-hidden rounded-lg aspect-video">
+                <img 
+                  src={culturalStorytelling2} 
+                  alt="Children's cultural storytelling and theatre workshop"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Production Showcase Images */}   
+              <div className="grid grid-cols-2 gap-2">
+                <div className="relative overflow-hidden rounded-md aspect-video">
+                  <img 
+                    src={lionSavanna} 
+                    alt="African wildlife - Majestic lion in savanna"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="relative overflow-hidden rounded-md aspect-video">
+                  <img 
+                    src={pandaCloseup} 
+                    alt="Asian wildlife - Giant panda in bamboo forest"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Production Features with Videos */}
+      <section className="py-4 bg-gradient-forest">
+        <div className="container mx-auto px-2">
+          <div className="grid lg:grid-cols-2 gap-3 items-center">
+            <div className="space-y-2">
+              <video 
+                src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="w-full h-48 object-cover rounded-lg shadow-soft"
+              />
+            </div>
+            
+            <div className="grid grid-cols-2 gap-2">
+              {features.map((feature, index) => (
+                <Card key={index} className="border border-forest-light/30 hover:shadow-soft transition-all duration-300">
+                  <CardContent className="p-3 text-center">
+                    <div className="text-forest-deep mb-2 flex justify-center">
+                      {feature.icon}
+                    </div>
+                    <h4 className="font-semibold text-xs text-forest-deep mb-1 leading-tight">
+                      {feature.title}
+                    </h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Whimsy Films Matters */}
+      <section className="py-6 bg-forest-deep text-ivory">
+        <div className="container mx-auto px-2">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Why Whimsy Films Matters</h2>
+              <p className="text-base sm:text-lg text-ivory/90 leading-relaxed mb-4 px-2">We are not simply a film studio. We are building a global cultural platform where every production:</p>
+              
+              <div className="grid md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm sm:text-base text-ivory/90">Acts as a soft power tool for governments to showcase their cultural heritage</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm sm:text-base text-ivory/90">Serves as a catalyst for conservation partnerships, linking storytelling with wildlife protection</p>
                   </div>
                 </div>
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-base sm:text-lg text-ivory/90">Supports education systems, offering engaging, curriculum-linked cultural resources</p>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm sm:text-base text-ivory/90">Supports education systems, offering engaging, curriculum-linked cultural resources</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-base sm:text-lg text-ivory/90">Creates new economic opportunities in creative industries, tourism, and cultural exchange</p>
+                  <div className="flex items-start gap-2">
+                    <div className="w-2 h-2 bg-gold-warm rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm sm:text-base text-ivory/90">Creates new economic opportunities in creative industries, tourism, and cultural exchange</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 lg:mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="bg-ivory/10 border-ivory/20 hover:bg-ivory/15 transition-all duration-300">
-                  <CardContent className="p-4 sm:p-6 lg:p-8 text-center">
-                    <div className="text-gold-warm mb-4 sm:mb-6 flex justify-center">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-gold-warm mb-3 flex justify-center">
                       {benefit.icon}
                     </div>
-                    <h3 className="font-semibold text-ivory mb-2 sm:mb-3 text-base sm:text-lg">{benefit.title}</h3>
-                    <p className="text-xs sm:text-sm text-ivory/80 leading-relaxed">{benefit.description}</p>
+                    <h3 className="font-semibold text-ivory mb-2 text-sm sm:text-base">{benefit.title}</h3>
+                    <p className="text-xs text-ivory/80 leading-relaxed">{benefit.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
             <div className="text-center">
-              <p className="text-lg sm:text-xl text-ivory/90 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto px-2">For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to align with a high-growth creative sector while creating measurable social and environmental impact.</p>
+              <p className="text-base sm:text-lg text-ivory/90 leading-relaxed mb-4 max-w-3xl mx-auto px-2">For investors, governments, and NGOs, Whimsy Films represents a rare opportunity to align with a high-growth creative sector while creating measurable social and environmental impact.</p>
               
-              <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+              <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 justify-center">
                 <Button variant="warm" size="lg" asChild className="w-full sm:w-auto">
                   <Link to="/impact">Discover Our Impact</Link>
                 </Button>
@@ -346,14 +389,14 @@ const Index = () => {
       </section>
 
       {/* Home Sub-Sections */}
-      <section className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-gradient-warm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <section className="py-6 bg-gradient-warm">
+        <div className="container mx-auto px-2">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-4 sm:p-6 lg:p-8">
-                <BookOpen className="h-10 sm:h-12 w-10 sm:w-12 text-primary mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-3 sm:mb-4">Our Mission</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">Creating films that celebrate folklore, protect wildlife, and inspire global action.</p>
+              <CardContent className="p-4">
+                <BookOpen className="h-8 w-8 text-primary mx-auto mb-3" />
+                <h3 className="text-base font-semibold text-forest-deep mb-2">Our Mission</h3>
+                <p className="text-muted-foreground mb-3 leading-relaxed text-xs">Creating films that celebrate folklore, protect wildlife, and inspire global action.</p>
                 <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/vision">Read Our Mission</Link>
                 </Button>
@@ -361,10 +404,10 @@ const Index = () => {
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-4 sm:p-6 lg:p-8">
-                <Target className="h-10 sm:h-12 w-10 sm:w-12 text-primary mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-3 sm:mb-4">Our Impact</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">Measurable conservation, cultural, educational and economic outcomes.</p>
+              <CardContent className="p-4">
+                <Target className="h-8 w-8 text-primary mx-auto mb-3" />
+                <h3 className="text-base font-semibold text-forest-deep mb-2">Our Impact</h3>
+                <p className="text-muted-foreground mb-3 leading-relaxed text-xs">Measurable conservation, cultural, educational and economic outcomes.</p>
                 <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/impact">Explore Our Impact</Link>
                 </Button>
@@ -372,10 +415,10 @@ const Index = () => {
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-4 sm:p-6 lg:p-8">
-                <Film className="h-10 sm:h-12 w-10 sm:w-12 text-primary mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-3 sm:mb-4">Our Approach</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">Blending puppetry, wildlife, AI, and folklore into magical storytelling.</p>
+              <CardContent className="p-4">
+                <Film className="h-8 w-8 text-primary mx-auto mb-3" />
+                <h3 className="text-base font-semibold text-forest-deep mb-2">Our Approach</h3>
+                <p className="text-muted-foreground mb-3 leading-relaxed text-xs">Blending puppetry, wildlife, AI, and folklore into magical storytelling.</p>
                 <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/productions">Discover Our Approach</Link>
                 </Button>
@@ -383,10 +426,10 @@ const Index = () => {
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-4 sm:p-6 lg:p-8">
-                <Shield className="h-10 sm:h-12 w-10 sm:w-12 text-primary mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-3 sm:mb-4">Digital Archives</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">Preserving cultural heritage through modern storytelling technology.</p>
+              <CardContent className="p-4">
+                <Shield className="h-8 w-8 text-primary mx-auto mb-3" />
+                <h3 className="text-base font-semibold text-forest-deep mb-2">Digital Archives</h3>
+                <p className="text-muted-foreground mb-3 leading-relaxed text-xs">Preserving cultural heritage through modern storytelling technology.</p>
                 <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/about">Explore the Archive Project</Link>
                 </Button>
@@ -397,20 +440,20 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-forest-deep mb-4 sm:mb-6 lg:mb-8">Join the Global Movement</h2>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed px-2">Every story matters. Every partnership creates change. Every action protects our future.</p>
+      <section className="py-6 bg-background">
+        <div className="container mx-auto px-2 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-forest-deep mb-4">Join the Global Movement</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed px-2">Every story matters. Every partnership creates change. Every action protects our future.</p>
             
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
+            <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 justify-center">
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
-              <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
+              <Button variant="magical" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/get-involved">Support Wildlife Storytelling</Link>
               </Button>
-              <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
+              <Button variant="warm" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/get-involved">Get Involved</Link>
               </Button>
             </div>
