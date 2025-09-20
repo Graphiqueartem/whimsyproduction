@@ -30,7 +30,8 @@ const Navigation = () => {
   const navigationItems = [
     { title: "Home", href: "/" },
     {
-      title: "About Us",
+      title: "About Us", 
+      href: "/about",
       items: [
         { title: "Who We Are", href: "/about" },
         { title: "Our Story", href: "/about#story" },
@@ -39,6 +40,7 @@ const Navigation = () => {
     },
     {
       title: "Our Vision",
+      href: "/vision", 
       items: [
         { title: "Mission & Values", href: "/vision" },
         { title: "Why Storytelling Matters", href: "/vision#storytelling" },
@@ -47,6 +49,7 @@ const Navigation = () => {
     },
     {
       title: "Our Impact",
+      href: "/impact",
       items: [
         { title: "Conservation Impact", href: "/impact#conservation" },
         { title: "Cultural Impact", href: "/impact#cultural" },
@@ -56,6 +59,7 @@ const Navigation = () => {
     },
     {
       title: "Our Productions",
+      href: "/productions",
       items: [
         { title: "Current Development Slate", href: "/productions" },
         { title: "Our Approach", href: "/productions#approach" },
@@ -63,6 +67,7 @@ const Navigation = () => {
     },
     {
       title: "Partnerships",
+      href: "/partnerships",
       items: [
         { title: "Governments", href: "/partnerships#governments" },
         { title: "NGOs & Charities", href: "/partnerships#ngos" },
@@ -95,20 +100,20 @@ const Navigation = () => {
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <div className="grid gap-2 p-4 w-64">
+                      <Link to={item.href || `/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                          {item.title}
+                        </NavigationMenuTrigger>
+                      </Link>
+                      <NavigationMenuContent className="top-full mt-1">
+                        <div className="grid gap-1 p-2 w-56 bg-background border border-border shadow-lg rounded-md">
                           {item.items.map((subItem) => (
                             <NavigationMenuLink key={subItem.href} asChild>
                               <Link
                                 to={subItem.href}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               >
-                                <div className="text-sm font-medium leading-none">
-                                  {subItem.title}
-                                </div>
+                                {subItem.title}
                               </Link>
                             </NavigationMenuLink>
                           ))}

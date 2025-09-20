@@ -49,24 +49,23 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-6 bg-gradient-hero text-white">
+      <section className="py-4 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">
             A Global Studio With a Purpose
           </h1>
-          <p className="text-sm sm:text-base text-ivory/90 max-w-2xl mx-auto mb-4">
+          <p className="text-sm text-ivory/90 max-w-2xl mx-auto">
             More than a production house — we are a movement for cultural celebration and conservation.
           </p>
-          
         </div>
       </section>
 
       {/* Wildlife Videos Section */}
-      <section className="py-4 bg-background">
+      <section className="py-2 bg-background">
         <div className="container mx-auto px-2">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Our Team's Inspiration</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+            <h3 className="text-lg font-semibold text-forest-deep mb-2 text-center">Our Team's Inspiration</h3>
+            <div className="grid md:grid-cols-3 gap-2">
               <div className="text-center">
                 <video 
                   src="/src/assets/videos/praying-mantis.mp4"
@@ -74,21 +73,21 @@ const About = () => {
                   muted 
                   loop
                   playsInline
-                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
+                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
                 />
-                <p className="text-sm text-muted-foreground">Wildlife Focus</p>
+                <p className="text-xs text-muted-foreground">Wildlife Focus</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
-                  <p className="text-white text-sm text-center px-2">Cultural Heritage<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24 mb-1">
+                  <p className="text-white text-xs text-center px-2">Cultural Heritage<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
                 </div>
-                <p className="text-sm text-muted-foreground">Global Stories</p>
+                <p className="text-xs text-muted-foreground">Global Stories</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
-                  <p className="text-white text-sm text-center px-2">Creative Process<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24 mb-1">
+                  <p className="text-white text-xs text-center px-2">Creative Process<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
                 </div>
-                <p className="text-sm text-muted-foreground">Behind the Scenes</p>
+                <p className="text-xs text-muted-foreground">Behind the Scenes</p>
               </div>
             </div>
           </div>
@@ -96,13 +95,13 @@ const About = () => {
       </section>
 
       {/* Who We Are */}
-      <section id="who-we-are" className="py-6 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <section id="who-we-are" className="py-3 bg-background">
+        <div className="container mx-auto px-2">
+          <div className="grid lg:grid-cols-2 gap-4 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">Who We Are</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-forest-deep mb-2">Who We Are</h2>
               
-              <div className="prose prose-lg text-muted-foreground space-y-3 lg:space-y-4 text-sm sm:text-base lg:text-lg">
+              <div className="text-muted-foreground space-y-2 text-sm">
                 <p>
                   Whimsy Films is a UK-based production house dedicated to creating magical, 
                   child-centered films and series that combine folklore, wildlife, and imaginative 

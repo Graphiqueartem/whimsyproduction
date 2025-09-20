@@ -114,40 +114,40 @@ const Index = () => {
       </section>
 
       {/* Inspirational Quote Divider */}
-      <section className="py-4 bg-gradient-forest">
-        <div className="container mx-auto px-2 sm:px-4 lg:px-6 text-center">
-          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep max-w-4xl mx-auto leading-relaxed">
+      <section className="py-2 bg-gradient-forest">
+        <div className="container mx-auto px-2 text-center">
+          <blockquote className="text-base sm:text-lg font-serif italic text-forest-deep max-w-3xl mx-auto">
             "Every tradition is a story. Every story is a bridge to the future."
           </blockquote>
         </div>
       </section>
 
       {/* Expanded Intro Section */}
-      <section className="py-6 bg-background">
-        <div className="container mx-auto px-2 sm:px-4 lg:px-6">
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-            <div className="space-y-4 lg:space-y-6">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-forest-deep leading-tight">
+      <section className="py-3 bg-background">
+        <div className="container mx-auto px-2">
+          <div className="grid lg:grid-cols-2 gap-4 items-start">
+            <div className="space-y-3">
+              <h2 className="text-xl sm:text-2xl font-bold text-forest-deep">
                 Stories That Change the World
               </h2>
               
-              <div className="text-sm sm:text-base text-muted-foreground space-y-3 lg:space-y-4">
+              <div className="text-sm text-muted-foreground space-y-2">
                 <p>At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.</p>
                 
                 <p>We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.</p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
-                <Button variant="default" size="default" asChild className="w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/partnerships">Explore Partnerships</Link>
                 </Button>
-                <Button variant="outline" size="default" asChild className="w-full sm:w-auto">
+                <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                   <Link to="/get-involved">Register Your Interest</Link>
                 </Button>
               </div>
 
               {/* Wildlife Gallery */}
-              <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4">
+              <div className="grid grid-cols-2 gap-2 pt-2">
                 <div className="relative overflow-hidden rounded-lg aspect-video">
                   <img 
                     src={chimpanzeePortrait} 
@@ -165,22 +165,22 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="space-y-4 lg:space-y-6">
+            <div className="space-y-3">
               {/* Wildlife Videos Section */}
-              <div className="grid md:grid-cols-3 gap-3 mb-6">
+              <div className="grid md:grid-cols-3 gap-2 mb-3">
                 <video 
                   src="/src/assets/videos/praying-mantis.mp4"
                   autoPlay 
                   muted 
                   loop
                   playsInline
-                  className="w-full h-32 object-cover rounded-lg shadow-soft"
+                  className="w-full h-24 object-cover rounded-lg shadow-soft"
                 />
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32">
-                  <p className="text-white text-sm text-center px-2">Snow Hill Nature<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24">
+                  <p className="text-white text-xs text-center px-2">Snow Hill Nature<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
                 </div>
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32">
-                  <p className="text-white text-sm text-center px-2">Mountain River Aerial<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24">
+                  <p className="text-white text-xs text-center px-2">Mountain River Aerial<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
                 </div>
               </div>
 
