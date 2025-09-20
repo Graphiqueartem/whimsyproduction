@@ -17,7 +17,12 @@ import {
   GraduationCap,
   Film
 } from "lucide-react";
-import heroImage from "@/assets/hero-main.jpg";
+import eagleHero from "@/assets/videos/eagle-hero.jpg";
+import turtleConservation from "@/assets/videos/turtle-conservation.jpg";
+import pandaCloseup from "@/assets/videos/panda-closeup.jpg";
+import lionSavanna from "@/assets/videos/lion-savanna.jpg";
+import chimpanzeePortrait from "@/assets/videos/chimpanzee-portrait.jpg";
+import zebraGrassland from "@/assets/videos/zebra-grassland.jpg";
 
 const Index = () => {
   const features = [
@@ -73,7 +78,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${heroImage})`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${eagleHero})`
           }}
         />
         
@@ -140,9 +145,42 @@ const Index = () => {
                   <Link to="/get-involved">Register Your Interest</Link>
                 </Button>
               </div>
+
+              {/* Wildlife Gallery */}
+              <div className="grid grid-cols-2 gap-4 pt-8">
+                <div className="relative overflow-hidden rounded-lg aspect-video">
+                  <img 
+                    src={chimpanzeePortrait} 
+                    alt="Wildlife conservation - Chimpanzee portrait showing intelligence and emotion"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="relative overflow-hidden rounded-lg aspect-video">
+                  <img 
+                    src={zebraGrassland} 
+                    alt="Wildlife in natural habitat - Zebra in grassland"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
 
             <div className="space-y-8">
+              {/* Hero Wildlife Image */}
+              <div className="relative overflow-hidden rounded-lg aspect-video mb-8">
+                <img 
+                  src={turtleConservation} 
+                  alt="Ocean conservation - Sea turtle swimming with fish"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">Conservation Through Storytelling</h3>
+                    <p className="text-sm opacity-90">Protecting marine life through powerful narratives</p>
+                  </div>
+                </div>
+              </div>
+
               <Card className="border-0 shadow-soft bg-gradient-warm">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold text-forest-deep mb-6">Our Mission</h3>
@@ -173,7 +211,25 @@ const Index = () => {
               <Card className="border-0 shadow-soft bg-gradient-forest">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold text-forest-deep mb-6">Our Production House</h3>
-                  <p className="text-forest-deep/80 leading-relaxed">Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike. From Africa to Asia, from Europe to the Americas, we bring magical stories to life — and invite the world to join us.</p>
+                  <p className="text-forest-deep/80 leading-relaxed mb-6">Our production house blends film, theatre, puppetry, and AI innovation. Our work celebrates folklore, protects wildlife, and inspires the imaginations of children and adults alike. From Africa to Asia, from Europe to the Americas, we bring magical stories to life — and invite the world to join us.</p>
+                  
+                  {/* Production Showcase Images */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="relative overflow-hidden rounded-md aspect-video">
+                      <img 
+                        src={lionSavanna} 
+                        alt="African wildlife - Majestic lion in savanna"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                    </div>
+                    <div className="relative overflow-hidden rounded-md aspect-video">
+                      <img 
+                        src={pandaCloseup} 
+                        alt="Asian wildlife - Giant panda in bamboo forest"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
