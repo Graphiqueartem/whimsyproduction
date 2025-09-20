@@ -146,16 +146,34 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-12 bg-background">
         <div className="container mx-auto px-2">
-          {/* Praying Mantis Video */}
+          {/* Wildlife Videos Section */}
           <div className="max-w-4xl mx-auto mb-8">
-            <video 
-              src="/src/assets/videos/praying-mantis.mp4"
-              autoPlay 
-              muted 
-              loop
-              playsInline
-              className="w-full h-40 md:h-56 object-cover rounded-xl shadow-magical"
-            />
+            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Connect With Our Mission</h3>
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              <div className="text-center">
+                <video 
+                  src="/src/assets/videos/praying-mantis.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
+                />
+                <p className="text-sm text-muted-foreground">Wildlife Conservation</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32 mb-2">
+                  <p className="text-white text-sm text-center px-2">Global Stories<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                </div>
+                <p className="text-sm text-muted-foreground">Cultural Heritage</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32 mb-2">
+                  <p className="text-white text-sm text-center px-2">Partnership Magic<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                </div>
+                <p className="text-sm text-muted-foreground">Collaboration</p>
+              </div>
+            </div>
           </div>
           
           <div className="text-center mb-8">

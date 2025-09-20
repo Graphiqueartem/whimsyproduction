@@ -134,7 +134,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="hero" size="default" asChild>
+            <Button variant="hero" size="sm" asChild>
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
           </div>
@@ -188,7 +188,7 @@ const Navigation = () => {
                   </div>
                 ))}
                 <div className="pt-4 border-t border-border">
-                  <Button variant="hero" size="lg" className="w-full" asChild>
+                  <Button variant="hero" size="default" className="w-full" asChild>
                     <Link to="/partnerships" onClick={() => setIsOpen(false)}>
                       Partner With Us
                     </Link>

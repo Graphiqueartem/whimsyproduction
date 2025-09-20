@@ -54,16 +54,39 @@ const Vision = () => {
             that protect wildlife, celebrate heritage, and inspire global action.
           </p>
           
-          {/* Praying Mantis Video */}
-          <div className="max-w-xl mx-auto">
-            <video 
-              src="/src/assets/videos/praying-mantis.mp4"
-              autoPlay 
-              muted 
-              loop
-              playsInline
-              className="w-full h-28 object-cover rounded-lg shadow-magical"
-            />
+        </div>
+      </section>
+
+      {/* Wildlife Videos Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-2">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Our Vision in Motion</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="text-center">
+                <video 
+                  src="/src/assets/videos/praying-mantis.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
+                />
+                <p className="text-sm text-muted-foreground">Nature's Wonder</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
+                  <p className="text-white text-sm text-center px-2">Future Stories<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                </div>
+                <p className="text-sm text-muted-foreground">Cultural Bridge Building</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
+                  <p className="text-white text-sm text-center px-2">Global Impact<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
+                </div>
+                <p className="text-sm text-muted-foreground">Worldwide Inspiration</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

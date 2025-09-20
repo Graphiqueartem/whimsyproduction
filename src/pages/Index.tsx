@@ -166,20 +166,35 @@ const Index = () => {
             </div>
 
             <div className="space-y-4 lg:space-y-6">
-              {/* Praying Mantis Video */}
-              <div className="relative overflow-hidden rounded-lg aspect-video mb-4 lg:mb-6">
+              {/* Wildlife Videos Section */}
+              <div className="grid md:grid-cols-3 gap-3 mb-6">
                 <video 
                   src="/src/assets/videos/praying-mantis.mp4"
                   autoPlay 
                   muted 
                   loop
                   playsInline
+                  className="w-full h-32 object-cover rounded-lg shadow-soft"
+                />
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32">
+                  <p className="text-white text-sm text-center px-2">Snow Hill Nature<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
+                </div>
+                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32">
+                  <p className="text-white text-sm text-center px-2">Mountain River Aerial<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
+                </div>
+              </div>
+
+              {/* Praying Mantis Video */}
+              <div className="relative overflow-hidden rounded-lg aspect-video mb-4 lg:mb-6">
+                <img 
+                  src={turtleConservation} 
+                  alt="Ocean conservation - Sea turtle swimming with fish"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent flex items-end">
                   <div className="p-3 sm:p-4 text-white">
-                    <h3 className="text-base sm:text-lg font-semibold mb-1">Wildlife in Focus</h3>
-                    <p className="text-xs opacity-90">Capturing nature's intricate beauty</p>
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">Conservation Through Storytelling</h3>
+                    <p className="text-xs opacity-90">Protecting marine life through powerful narratives</p>
                   </div>
                 </div>
               </div>
