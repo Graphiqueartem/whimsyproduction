@@ -20,6 +20,11 @@ import {
   MessageCircle
 } from "lucide-react";
 
+// Cultural storytelling images
+import culturalStory1 from "@/assets/cultural-storytelling-1.jpg";
+import culturalStory2 from "@/assets/cultural-storytelling-2.jpg";
+import culturalStory8 from "@/assets/cultural-storytelling-8.jpg";
+
 const GetInvolved = () => {
   const involvementTypes = [
     {
@@ -98,68 +103,87 @@ const GetInvolved = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Be Part of the Magic
           </h1>
-          <p className="text-xl text-ivory/90 max-w-4xl mx-auto mb-8">
+          <p className="text-lg text-ivory/90 max-w-3xl mx-auto mb-6">
             Whimsy Films is building a global movement of storytellers, conservationists, 
             educators, and dreamers. You don't just watch our films — you help create them.
           </p>
           
-          <div className="bg-ivory/10 border border-ivory/20 rounded-2xl p-8 max-w-3xl mx-auto mb-8">
-            <p className="text-2xl font-serif italic text-gold-warm">
+          <div className="bg-ivory/10 border border-ivory/20 rounded-xl p-6 max-w-2xl mx-auto mb-6">
+            <p className="text-xl font-serif italic text-gold-warm">
               "This is more than film. More than folklore. More than puppetry. 
               This is a movement. A global journey where culture and creativity 
               unite to protect nature and inspire young minds. Will you join us?"
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <Button variant="warm" size="lg" asChild>
               <Link to="#organizations">Partner With Us</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild>
+            <Button variant="magical" size="lg" asChild>
               <Link to="#individuals">Join the Movement</Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+            <Button variant="outline" size="lg" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
               <Link to="#newsletter">Stay Connected</Link>
             </Button>
+          </div>
+          
+          {/* Cultural Images Row */}
+          <div className="grid grid-cols-3 gap-2 max-w-lg mx-auto">
+            <img src={culturalStory1} alt="Traditional puppet theater" className="w-full h-20 object-cover rounded-lg" />
+            <img src={culturalStory2} alt="Shadow puppetry performance" className="w-full h-20 object-cover rounded-lg" />
+            <img src={culturalStory8} alt="Scandinavian folk traditions" className="w-full h-20 object-cover rounded-lg" />
           </div>
         </div>
       </section>
 
       {/* Organizations & Institutions */}
-      <section id="organizations" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+      <section id="organizations" className="py-12 bg-background">
+        <div className="container mx-auto px-2">
+          {/* Praying Mantis Video */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-40 md:h-56 object-cover rounded-xl shadow-magical"
+            />
+          </div>
+          
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-forest-deep mb-4">
               Organizations & Institutions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Partner with us to amplify your mission, preserve cultural heritage, 
               and create lasting impact through the power of storytelling.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {involvementTypes.map((type, index) => (
               <Card key={index} className="hover:shadow-magical transition-all duration-300 transform hover:scale-105 border-forest-light/30">
                 <CardHeader>
-                  <div className="text-primary mb-4 flex justify-center">
+                  <div className="text-primary mb-3 flex justify-center">
                     {type.icon}
                   </div>
-                  <CardTitle className="text-center text-forest-deep text-xl">
+                  <CardTitle className="text-center text-forest-deep text-lg">
                     {type.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center space-y-4">
-                  <p className="text-muted-foreground">
+                <CardContent className="text-center space-y-3">
+                  <p className="text-muted-foreground text-sm">
                     {type.description}
                   </p>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     {type.benefits.map((benefit, benefitIndex) => (
                       <Badge key={benefitIndex} variant="secondary" className="text-xs mr-1 mb-1">
                         {benefit}

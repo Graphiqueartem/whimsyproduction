@@ -17,6 +17,12 @@ import {
   Bell
 } from "lucide-react";
 
+// Cultural storytelling images
+import culturalStory3 from "@/assets/cultural-storytelling-3.jpg";
+import culturalStory4 from "@/assets/cultural-storytelling-4.jpg";
+import culturalStory5 from "@/assets/cultural-storytelling-5.jpg";
+import culturalStory6 from "@/assets/cultural-storytelling-6.jpg";
+
 const News = () => {
   const featuredArticles = [
     {
@@ -101,41 +107,61 @@ const News = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             News & Insights
           </h1>
-          <p className="text-xl text-ivory/90 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-ivory/90 max-w-2xl mx-auto mb-6">
             Stay updated on our latest productions, partnerships, and impact stories. 
             Discover thought leadership on culture, conservation, and the power of storytelling.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <Button variant="warm" size="lg" asChild>
               <Link to="#featured">Read Latest Stories</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild>
+            <Button variant="magical" size="lg" asChild>
               <Link to="#newsletter">Subscribe to Updates</Link>
             </Button>
+          </div>
+          
+          {/* Cultural Images Row */}
+          <div className="grid grid-cols-4 gap-2 max-w-2xl mx-auto">
+            <img src={culturalStory3} alt="African storytelling ceremony" className="w-full h-16 object-cover rounded-md" />
+            <img src={culturalStory4} alt="Native American folklore" className="w-full h-16 object-cover rounded-md" />
+            <img src={culturalStory5} alt="Celtic traditions" className="w-full h-16 object-cover rounded-md" />
+            <img src={culturalStory6} alt="Chinese opera" className="w-full h-16 object-cover rounded-md" />
           </div>
         </div>
       </section>
 
       {/* Featured Articles */}
-      <section id="featured" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+      <section id="featured" className="py-12 bg-background">
+        <div className="container mx-auto px-2">
+          {/* Praying Mantis Video */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-40 md:h-56 object-cover rounded-xl shadow-magical"
+            />
+          </div>
+          
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-forest-deep mb-4">
               Featured Stories
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Deep dives into our impact, behind-the-scenes insights, and the latest 
               developments in culture-based conservation storytelling.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid lg:grid-cols-3 gap-6 mb-8">
             {featuredArticles.map((article, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-magical transition-all duration-300 transform hover:scale-105">
                 <div className="aspect-video bg-muted">
@@ -150,27 +176,27 @@ const News = () => {
                     <Badge variant="secondary">{article.category}</Badge>
                     <span className="text-sm text-muted-foreground">{article.readTime}</span>
                   </div>
-                  <CardTitle className="text-xl text-forest-deep leading-tight">
+                  <CardTitle className="text-lg text-forest-deep leading-tight">
                     {article.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground mb-3 text-sm">
                     {article.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                  <div className="flex items-center justify-between text-xs text-muted-foreground mb-3">
                     <div className="flex items-center gap-2">
-                      <User className="h-4 w-4" />
+                      <User className="h-3 w-3" />
                       <span>{article.author}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
+                      <Calendar className="h-3 w-3" />
                       <span>{article.date}</span>
                     </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1 mb-3">
                     {article.tags.map((tag, tagIndex) => (
                       <Badge key={tagIndex} variant="outline" className="text-xs">
                         {tag}
@@ -178,10 +204,10 @@ const News = () => {
                     ))}
                   </div>
                   
-                  <Button variant="outline" className="w-full group" asChild>
+                  <Button variant="outline" className="w-full group" size="sm" asChild>
                     <Link to={`/news/${article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
                       Read Full Story
-                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="h-3 w-3 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -192,13 +218,13 @@ const News = () => {
       </section>
 
       {/* Thought Leadership & Research */}
-      <section className="py-20 bg-forest-light/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+      <section className="py-12 bg-forest-light/20">
+        <div className="container mx-auto px-2">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-forest-deep mb-4">
               Thought Leadership
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Insights from experts, researchers, and leaders in cultural preservation, 
               conservation, and innovative storytelling.
             </p>

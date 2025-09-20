@@ -79,8 +79,8 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6">
+        <div className="flex h-14 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-forest-deep">
