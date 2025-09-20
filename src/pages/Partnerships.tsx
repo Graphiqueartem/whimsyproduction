@@ -164,9 +164,9 @@ const Partnerships = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+      <section className="py-6 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Partnerships That Matter
@@ -195,7 +195,7 @@ const Partnerships = () => {
       </section>
 
       {/* Wildlife Videos Section */}
-      <section className="py-8 bg-background">
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-2">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Global Partnership Stories</h3>
@@ -229,7 +229,7 @@ const Partnerships = () => {
       </section>
 
       {/* Partnership Types */}
-      <section className="py-8 sm:py-10 lg:py-12 bg-background">
+      <section id="governments" className="py-6 bg-background">
         <div className="container mx-auto px-2">
           <div className="text-center mb-6 lg:mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-forest-deep mb-3 lg:mb-4">

@@ -110,9 +110,9 @@ const Impact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+      <section className="py-6 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Stories That Spark Real-World Change
@@ -135,7 +135,7 @@ const Impact = () => {
       </section>
       
       {/* Wildlife Videos Section */}
-      <section className="py-8 bg-background">
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-2">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Wildlife in Action</h3>
@@ -169,7 +169,7 @@ const Impact = () => {
       </section>
       
       {/* Quote Section */}
-      <section className="py-8 bg-forest-deep text-white">
+      <section className="py-4 bg-forest-deep text-white">
         <div className="container mx-auto px-2 text-center">
           <p className="text-base sm:text-lg text-ivory/90 max-w-3xl mx-auto mb-4">
             Every Whimsy Films project is designed with dual impact: to enchant audiences 
@@ -190,7 +190,7 @@ const Impact = () => {
       </section>
 
       {/* Impact Overview */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-background">
+      <section id="conservation" className="py-6 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
@@ -227,7 +227,7 @@ const Impact = () => {
       </section>
 
       {/* Impact Areas */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-forest-light/10">
+      <section id="cultural" className="py-6 bg-forest-light/10">
         <div className="container mx-auto px-4">
           <div className="space-y-8 lg:space-y-12">
             {impactAreas.map((area, index) => (

@@ -47,9 +47,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+      <section className="py-6 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             A Global Studio With a Purpose
@@ -62,7 +62,7 @@ const About = () => {
       </section>
 
       {/* Wildlife Videos Section */}
-      <section className="py-8 bg-background">
+      <section className="py-4 bg-background">
         <div className="container mx-auto px-2">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl font-semibold text-forest-deep mb-4 text-center">Our Team's Inspiration</h3>
@@ -96,7 +96,7 @@ const About = () => {
       </section>
 
       {/* Who We Are */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-background">
+      <section id="who-we-are" className="py-6 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>

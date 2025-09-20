@@ -72,9 +72,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -114,7 +114,7 @@ const Index = () => {
       </section>
 
       {/* Inspirational Quote Divider */}
-      <section className="py-6 sm:py-8 lg:py-10 bg-gradient-forest">
+      <section className="py-4 bg-gradient-forest">
         <div className="container mx-auto px-2 sm:px-4 lg:px-6 text-center">
           <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep max-w-4xl mx-auto leading-relaxed">
             "Every tradition is a story. Every story is a bridge to the future."
@@ -123,7 +123,7 @@ const Index = () => {
       </section>
 
       {/* Expanded Intro Section */}
-      <section className="py-8 sm:py-10 lg:py-12 bg-background">
+      <section className="py-6 bg-background">
         <div className="container mx-auto px-2 sm:px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
             <div className="space-y-4 lg:space-y-6">

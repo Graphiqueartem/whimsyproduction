@@ -79,8 +79,8 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
-      <div className="container mx-auto px-2 sm:px-4 lg:px-6">
-        <div className="flex h-16 items-center justify-between">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6 max-w-full">
+        <div className="flex h-14 items-center justify-between gap-2">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-forest-deep">
@@ -134,7 +134,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="hero" size="sm" className="text-xs px-3 py-1.5 whitespace-nowrap" asChild>
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
           </div>

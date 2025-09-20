@@ -105,9 +105,9 @@ const News = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <section className="py-8 bg-gradient-hero text-white">
+      <section className="py-6 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">
             News & Insights
@@ -137,7 +137,7 @@ const News = () => {
       </section>
 
       {/* Featured Articles */}
-      <section id="featured" className="py-12 bg-background">
+      <section id="featured" className="py-6 bg-background">
         <div className="container mx-auto px-2">
           {/* Wildlife Videos Section */}
           <div className="max-w-4xl mx-auto mb-8">

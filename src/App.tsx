@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToHash from "./components/ScrollToHash";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Vision from "./pages/Vision";
@@ -28,6 +29,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <ScrollToHash />
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">
