@@ -83,19 +83,19 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
-      <div className="container mx-auto px-2 sm:px-4 lg:px-6 max-w-full">
-        <div className="flex h-14 items-center justify-between gap-2">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/95 border-b border-border shadow-soft">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+        <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-forest-deep">
+          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+            <div className="text-2xl sm:text-3xl font-bold text-forest-deep hover:text-primary transition-colors">
               Whimsy<span className="text-gold-warm">Films</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList className="flex items-center space-x-1">
+          <NavigationMenu className="hidden lg:flex flex-1 justify-center max-w-4xl">
+            <NavigationMenuList className="flex items-center space-x-2">
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
@@ -105,13 +105,13 @@ const Navigation = () => {
                           {item.title}
                         </NavigationMenuTrigger>
                       </Link>
-                      <NavigationMenuContent className="absolute top-full left-0 mt-1 z-50">
-                        <div className="grid gap-1 p-3 w-64 bg-background border border-border shadow-lg rounded-md">
+                      <NavigationMenuContent className="absolute top-full left-0 mt-2 z-[100]">
+                        <div className="grid gap-1 p-4 w-72 bg-background/98 backdrop-blur border border-border shadow-magical rounded-lg">
                           {item.items.map((subItem) => (
                             <NavigationMenuLink key={subItem.href} asChild>
                               <Link
                                 to={subItem.href}
-                                className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                className="block select-none rounded-lg p-3 text-sm font-medium leading-none no-underline outline-none transition-all duration-200 hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary hover:scale-105"
                               >
                                 {subItem.title}
                               </Link>
@@ -138,8 +138,8 @@ const Navigation = () => {
           </NavigationMenu>
 
           {/* CTA Button */}
-          <div className="hidden md:flex">
-            <Button variant="hero" size="sm" className="text-xs px-3 py-1.5 whitespace-nowrap" asChild>
+          <div className="hidden md:flex flex-shrink-0">
+            <Button variant="hero" size="sm" className="text-sm px-4 py-2 whitespace-nowrap font-semibold" asChild>
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
           </div>

@@ -4,17 +4,18 @@ import ProductionSection from "@/components/home/ProductionSection";
 import MissionSection from "@/components/home/MissionSection";
 import ImpactSection from "@/components/home/ImpactSection";
 import CallToActionSection from "@/components/home/CallToActionSection";
+import PageLayout from "@/components/layouts/PageLayout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background pt-14">
+    <PageLayout className="pt-0">
       <HeroSection />
       <IntroSection />
       <ProductionSection />
       <MissionSection />
       <ImpactSection />
       <CallToActionSection />
-    </div>
+    </PageLayout>
   );
 };
 
