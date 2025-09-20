@@ -44,12 +44,12 @@ const Vision = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
             Reimagining Stories, Inspiring Change
           </h1>
-          <p className="text-xl text-ivory/90 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-ivory/90 max-w-3xl mx-auto">
             Our vision extends far beyond entertainment — we create cultural experiences 
             that protect wildlife, celebrate heritage, and inspire global action.
           </p>
@@ -57,14 +57,14 @@ const Vision = () => {
       </section>
 
       {/* Mission & Values */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-8">
+          <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               Our Mission & Values
             </h2>
             
-            <div className="text-lg text-muted-foreground space-y-4 mb-12">
+            <div className="text-base sm:text-lg text-muted-foreground space-y-3 lg:space-y-4 mb-8 lg:mb-10">
               <p>
                 At Whimsy Films, our mission is to create films that celebrate folklore, 
                 protect wildlife, and inspire children everywhere to imagine a more 
@@ -74,7 +74,7 @@ const Vision = () => {
               <p>
                 Our values guide every decision:
               </p>
-              <ul className="space-y-2 mt-4">
+              <ul className="space-y-1 lg:space-y-2 mt-3 lg:mt-4 text-sm sm:text-base">
                 <li><strong>Imagination:</strong> wonder is the seed of empathy and action.</li>
                 <li><strong>Respect:</strong> cultural and ecological authenticity.</li>
                 <li><strong>Innovation:</strong> technology without losing artistry.</li>
@@ -83,17 +83,17 @@ const Vision = () => {
               </ul>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
               {values.map((value, index) => (
                 <Card key={index} className="border-forest-light/30 hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-                  <CardContent className="p-8 text-center">
-                    <div className="text-primary mb-4 flex justify-center">
+                  <CardContent className="p-4 sm:p-6 lg:p-8 text-center">
+                    <div className="text-primary mb-3 lg:mb-4 flex justify-center">
                       {value.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                       {value.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                       {value.description}
                     </p>
                   </CardContent>
@@ -101,7 +101,7 @@ const Vision = () => {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div className="mt-8 lg:mt-12">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/get-involved">Join Our Mission</Link>
               </Button>
@@ -111,15 +111,15 @@ const Vision = () => {
       </section>
 
       {/* Why Storytelling Matters */}
-      <section id="storytelling" className="py-20 bg-forest-light/20">
+      <section id="storytelling" className="py-8 sm:py-12 lg:py-16 bg-forest-light/20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-forest-deep mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
                 Why Storytelling Matters
               </h2>
               
-              <div className="space-y-6 text-lg text-muted-foreground">
+              <div className="space-y-4 lg:space-y-6 text-base sm:text-lg text-muted-foreground">
                 <p>
                   Stories are more than entertainment. They pass down cultural wisdom, shape 
                   childhood imagination, build empathy, and inspire societal change. Whimsy Films 
@@ -129,14 +129,14 @@ const Vision = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <Card className="bg-gradient-warm border-0">
-                <CardContent className="p-8">
-                  <Globe className="h-12 w-12 text-forest-deep mb-4" />
-                  <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <CardContent className="p-4 sm:p-6 lg:p-8">
+                  <Globe className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                  <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                     Stories as Global Language
                   </h3>
-                  <p className="text-forest-deep/80">
+                  <p className="text-forest-deep/80 text-sm sm:text-base">
                     Folklore transcends borders, languages, and cultures. A story about a 
                     brave child protecting forest animals resonates universally, whether 
                     told in Nigeria, Japan, or Peru.
@@ -145,12 +145,12 @@ const Vision = () => {
               </Card>
 
               <Card className="bg-gradient-forest border-0">
-                <CardContent className="p-8">
-                  <Heart className="h-12 w-12 text-forest-deep mb-4" />
-                  <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <CardContent className="p-4 sm:p-6 lg:p-8">
+                  <Heart className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                  <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                     Empathy Through Experience
                   </h3>
-                  <p className="text-forest-deep/80">
+                  <p className="text-forest-deep/80 text-sm sm:text-base">
                     When children see themselves as heroes protecting wildlife, they develop 
                     deep emotional connections to conservation that last a lifetime.
                   </p>
@@ -162,14 +162,14 @@ const Vision = () => {
       </section>
 
       {/* The Future We Are Building */}
-      <section id="future" className="py-20 bg-forest-deep text-white">
+      <section id="future" className="py-8 sm:py-12 lg:py-16 bg-forest-deep text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6">
               The Future We Are Building
             </h2>
             
-            <div className="text-xl text-ivory/90 space-y-6 mb-12">
+            <div className="text-lg sm:text-xl text-ivory/90 space-y-4 lg:space-y-6 mb-8 lg:mb-10">
               <p>
                 We envision a future where children everywhere grow up with stories representing their 
                 cultures, where families discover films that are entertaining yet enriching, and where 
@@ -177,14 +177,14 @@ const Vision = () => {
                 Conservation efforts are amplified by stories that make the natural world unforgettable.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 text-left mt-8 lg:mt-12">
                 <Card className="bg-ivory/10 border-ivory/20">
-                  <CardContent className="p-8">
-                    <Users className="h-8 w-8 text-gold-warm mb-4" />
-                    <h3 className="text-lg font-semibold text-ivory mb-3">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <Users className="h-6 sm:h-8 w-6 sm:w-8 text-gold-warm mb-3 lg:mb-4" />
+                    <h3 className="text-base sm:text-lg font-semibold text-ivory mb-2 lg:mb-3">
                       For Children & Families
                     </h3>
-                    <p className="text-ivory/80 text-base">
+                    <p className="text-ivory/80 text-sm sm:text-base">
                       Stories that celebrate their heritage while teaching universal values 
                       of empathy, courage, and environmental stewardship.
                     </p>
@@ -192,12 +192,12 @@ const Vision = () => {
                 </Card>
 
                 <Card className="bg-ivory/10 border-ivory/20">
-                  <CardContent className="p-8">
-                    <Globe className="h-8 w-8 text-gold-warm mb-4" />
-                    <h3 className="text-lg font-semibold text-ivory mb-3">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <Globe className="h-6 sm:h-8 w-6 sm:w-8 text-gold-warm mb-3 lg:mb-4" />
+                    <h3 className="text-base sm:text-lg font-semibold text-ivory mb-2 lg:mb-3">
                       For Governments & NGOs
                     </h3>
-                    <p className="text-ivory/80 text-base">
+                    <p className="text-ivory/80 text-sm sm:text-base">
                       Cultural diplomacy tools and conservation campaigns that reach hearts 
                       and minds through the power of storytelling.
                     </p>
@@ -205,12 +205,12 @@ const Vision = () => {
                 </Card>
 
                 <Card className="bg-ivory/10 border-ivory/20">
-                  <CardContent className="p-8">
-                    <BookOpen className="h-8 w-8 text-gold-warm mb-4" />
-                    <h3 className="text-lg font-semibold text-ivory mb-3">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <BookOpen className="h-6 sm:h-8 w-6 sm:w-8 text-gold-warm mb-3 lg:mb-4" />
+                    <h3 className="text-base sm:text-lg font-semibold text-ivory mb-2 lg:mb-3">
                       For Educators
                     </h3>
-                    <p className="text-ivory/80 text-base">
+                    <p className="text-ivory/80 text-sm sm:text-base">
                       Curriculum resources that make learning joyful while building global 
                       citizens who care about cultural diversity and environmental protection.
                     </p>
@@ -218,12 +218,12 @@ const Vision = () => {
                 </Card>
 
                 <Card className="bg-ivory/10 border-ivory/20">
-                  <CardContent className="p-8">
-                    <TreePine className="h-8 w-8 text-gold-warm mb-4" />
-                    <h3 className="text-lg font-semibold text-ivory mb-3">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <TreePine className="h-6 sm:h-8 w-6 sm:w-8 text-gold-warm mb-3 lg:mb-4" />
+                    <h3 className="text-base sm:text-lg font-semibold text-ivory mb-2 lg:mb-3">
                       For Our Planet
                     </h3>
-                    <p className="text-ivory/80 text-base">
+                    <p className="text-ivory/80 text-sm sm:text-base">
                       A generation of children who see themselves as protectors of wildlife 
                       and guardians of the natural world.
                     </p>
@@ -240,22 +240,22 @@ const Vision = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-warm">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-warm">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               Turn Vision Into Reality
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-6 lg:mb-8">
               Every great story begins with someone believing it's possible. 
               Join us in creating the stories that will shape tomorrow.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" asChild>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+              <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/get-involved">Join the Movement</Link>
               </Button>
             </div>

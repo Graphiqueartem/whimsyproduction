@@ -112,57 +112,57 @@ const Impact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
             Stories That Spark Real-World Change
           </h1>
-          <p className="text-xl text-ivory/90 max-w-4xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-4 lg:mb-6">
             Every Whimsy Films project is designed with dual impact: to enchant audiences 
             and to make a measurable difference in cultural preservation, wildlife conservation, and education.
           </p>
-          <p className="text-lg text-ivory/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-ivory/80 max-w-3xl mx-auto mb-6">
             Every nation has stories of animals, spirits, and heroes. These tales connect us to the earth. 
             We transform them into cinematic experiences that children and families everywhere can treasure.
           </p>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-2xl lg:max-w-3xl mx-auto">
             <img 
               src={conservationImage}
               alt="Children reading folklore books surrounded by wildlife in nature"
-              className="rounded-2xl shadow-magical"
+              className="rounded-lg lg:rounded-2xl shadow-magical w-full"
             />
           </div>
         </div>
       </section>
 
       {/* Impact Overview */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               Four Pillars of Global Impact
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Every nation has stories of animals, spirits, and heroes. These tales connect us to the earth. 
               We transform them into cinematic experiences that children and families everywhere can treasure.
             </p>
           </div>
 
           {/* Impact Metrics */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 lg:mb-12">
             {metrics.map((metric, index) => (
               <Card key={index} className="text-center hover:shadow-soft transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-primary mb-3 flex justify-center">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="text-primary mb-2 sm:mb-3 flex justify-center">
                     {metric.icon}
                   </div>
-                  <div className="text-2xl font-bold text-forest-deep mb-1">
+                  <div className="text-lg sm:text-2xl font-bold text-forest-deep mb-1">
                     {metric.value}
                   </div>
-                  <div className="font-semibold text-forest-deep mb-2">
+                  <div className="font-semibold text-forest-deep mb-1 sm:mb-2 text-sm sm:text-base">
                     {metric.label}
                   </div>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     {metric.description}
                   </p>
                 </CardContent>
@@ -173,36 +173,36 @@ const Impact = () => {
       </section>
 
       {/* Impact Areas */}
-      <section className="py-20 bg-forest-light/10">
+      <section className="py-8 sm:py-12 lg:py-16 bg-forest-light/10">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="space-y-8 lg:space-y-12">
             {impactAreas.map((area, index) => (
-              <div key={index} className={`${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} flex flex-col lg:flex-row gap-12 items-center`}>
+              <div key={index} className={`${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} flex flex-col lg:flex-row gap-6 lg:gap-8 items-center`}>
                 <div className="lg:w-1/2">
                   <Card className={`border-2 ${area.color} shadow-soft`}>
-                    <CardContent className="p-8">
-                      <div className="text-primary mb-6 flex justify-center lg:justify-start">
+                    <CardContent className="p-4 sm:p-6 lg:p-8">
+                      <div className="text-primary mb-4 lg:mb-6 flex justify-center lg:justify-start">
                         {area.icon}
                       </div>
                       
                       <div className="text-center lg:text-left">
-                        <h3 className="text-3xl font-bold text-forest-deep mb-2">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-forest-deep mb-2">
                           {area.title}
                         </h3>
-                        <p className="text-lg font-semibold text-primary mb-4">
+                        <p className="text-base sm:text-lg font-semibold text-primary mb-3 lg:mb-4">
                           {area.subtitle}
                         </p>
-                        <p className="text-muted-foreground text-lg mb-6">
+                        <p className="text-muted-foreground text-sm sm:text-base lg:text-lg mb-4 lg:mb-6">
                           {area.description}
                         </p>
 
-                        <div className="space-y-3 mb-8">
+                        <div className="space-y-2 lg:space-y-3 mb-6 lg:mb-8">
                           {area.benefits.map((benefit, benefitIndex) => (
-                            <div key={benefitIndex} className="flex items-start gap-3 text-left">
-                              <Badge variant="secondary" className="mt-1 shrink-0">
+                            <div key={benefitIndex} className="flex items-start gap-2 lg:gap-3 text-left">
+                              <Badge variant="secondary" className="mt-0.5 lg:mt-1 shrink-0 text-xs">
                                 ✓
                               </Badge>
-                              <span className="text-muted-foreground">
+                              <span className="text-muted-foreground text-sm sm:text-base">
                                 <strong>{benefit.split(':')[0]}:</strong>
                                 {benefit.split(':').slice(1).join(':')}
                               </span>
@@ -210,11 +210,11 @@ const Impact = () => {
                           ))}
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
-                          <Button variant="default" size="lg" asChild>
+                        <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 lg:gap-4">
+                          <Button variant="default" size="lg" asChild className="text-sm lg:text-base">
                             <Link to={area.ctaLink}>{area.cta}</Link>
                           </Button>
-                          <Button variant="outline" size="lg" asChild>
+                          <Button variant="outline" size="lg" asChild className="text-sm lg:text-base">
                             <Link to="/partnerships">Learn More</Link>
                           </Button>
                         </div>
@@ -223,15 +223,15 @@ const Impact = () => {
                   </Card>
                 </div>
 
-                <div className="lg:w-1/2 space-y-6">
+                <div className="lg:w-1/2 space-y-4 lg:space-y-6">
                   {index === 0 && (
                     <Card className="bg-gradient-forest border-0">
-                      <CardContent className="p-8">
-                        <TreePine className="h-12 w-12 text-forest-deep mb-4" />
-                        <h4 className="text-xl font-semibold text-forest-deep mb-3">
+                      <CardContent className="p-4 sm:p-6 lg:p-8">
+                        <TreePine className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                        <h4 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                           Wildlife Protection Through Emotional Connection
                         </h4>
-                        <p className="text-forest-deep/80">
+                        <p className="text-forest-deep/80 text-sm sm:text-base">
                           When children fall in love with characters inspired by real animals, 
                           they become lifelong advocates for conservation.
                         </p>
@@ -241,12 +241,12 @@ const Impact = () => {
 
                   {index === 1 && (
                     <Card className="bg-gradient-warm border-0">
-                      <CardContent className="p-8">
-                        <BookOpen className="h-12 w-12 text-forest-deep mb-4" />
-                        <h4 className="text-xl font-semibold text-forest-deep mb-3">
+                      <CardContent className="p-4 sm:p-6 lg:p-8">
+                        <BookOpen className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                        <h4 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                           Digital Cultural Archives
                         </h4>
-                        <p className="text-forest-deep/80">
+                        <p className="text-forest-deep/80 text-sm sm:text-base">
                           Our films serve as modern repositories of folklore, ensuring that 
                           traditional stories are preserved for future generations.
                         </p>
@@ -256,12 +256,12 @@ const Impact = () => {
 
                   {index === 2 && (
                     <Card className="bg-gradient-forest border-0">
-                      <CardContent className="p-8">
-                        <Heart className="h-12 w-12 text-forest-deep mb-4" />
-                        <h4 className="text-xl font-semibold text-forest-deep mb-3">
+                      <CardContent className="p-4 sm:p-6 lg:p-8">
+                        <Heart className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                        <h4 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                           Empathy-Driven Learning
                         </h4>
-                        <p className="text-forest-deep/80">
+                        <p className="text-forest-deep/80 text-sm sm:text-base">
                           Stories that put children at the center of heroic narratives build 
                           confidence, resilience, and social-emotional intelligence.
                         </p>
@@ -271,12 +271,12 @@ const Impact = () => {
 
                   {index === 3 && (
                     <Card className="bg-gradient-warm border-0">
-                      <CardContent className="p-8">
-                        <Camera className="h-12 w-12 text-forest-deep mb-4" />
-                        <h4 className="text-xl font-semibold text-forest-deep mb-3">
+                      <CardContent className="p-4 sm:p-6 lg:p-8">
+                        <Camera className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-forest-deep mb-3 lg:mb-4" />
+                        <h4 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                           Creative Economy Growth
                         </h4>
-                        <p className="text-forest-deep/80">
+                        <p className="text-forest-deep/80 text-sm sm:text-base">
                           Our productions create jobs in film, puppetry, education, and tourism 
                           while showcasing innovative storytelling techniques.
                         </p>
@@ -291,26 +291,26 @@ const Impact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-forest-deep text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-forest-deep text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6">
               Measurable Impact, Lasting Legacy
             </h2>
-            <p className="text-xl text-ivory/90 mb-12">
+            <p className="text-lg sm:text-xl text-ivory/90 mb-8 lg:mb-12">
               Join a movement where storytelling creates real change. Every partnership 
               amplifies conservation efforts, preserves cultural heritage, and inspires 
               the next generation of global citizens.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Button variant="warm" size="xl" asChild>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 lg:gap-6 justify-center">
+              <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/partnerships">Become a Partner</Link>
               </Button>
-              <Button variant="magical" size="xl" asChild>
+              <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/get-involved">Support Our Mission</Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+              <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep w-full sm:w-auto" asChild>
                 <Link to="/contact">Discuss Your Impact Goals</Link>
               </Button>
             </div>

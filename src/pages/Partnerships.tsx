@@ -166,30 +166,30 @@ const Partnerships = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
             Partnerships That Matter
           </h1>
-          <p className="text-xl text-ivory/90 max-w-4xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-4 lg:mb-6">
             At Whimsy Films, transformation happens when vision meets collaboration. We are building 
             a movement powered by governments, NGOs, cultural institutions, and forward-thinking sponsors. 
             By partnering with us, you step into a global conversation about how culture and conservation 
             can work together to shape the future.
           </p>
           
-          <blockquote className="text-2xl font-serif italic text-gold-warm mb-8">
+          <blockquote className="text-lg sm:text-2xl font-serif italic text-gold-warm mb-4 lg:mb-6">
             "Partnership turns vision into action—and action into legacy."
           </blockquote>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild>
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
               <Link to="/contact">Start a Conversation</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild>
+            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
               <Link to="/contact">Request a Partnership Pack</Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+            <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep w-full sm:w-auto" asChild>
               <Link to="/contact">Book a Presentation & Lunch Meeting</Link>
             </Button>
           </div>
@@ -197,61 +197,61 @@ const Partnerships = () => {
       </section>
 
       {/* Partnership Types */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               Your Impact, Amplified
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Every partner brings unique strengths and goals. We tailor our collaborations 
               to maximize your impact while advancing our shared mission of cultural preservation 
               and environmental protection.
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-8 lg:space-y-12">
             {partnerTypes.map((partner, index) => (
               <div key={index} id={partner.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}>
                 <Card className={`${partner.color} border-2 shadow-soft hover:shadow-magical transition-all duration-500`}>
-                  <CardHeader className="pb-6">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                      <div className="flex items-center gap-6">
+                  <CardHeader className="pb-4 lg:pb-6">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-6">
+                      <div className="flex items-center gap-4 lg:gap-6">
                         <div className="text-primary">
                           {partner.icon}
                         </div>
                         <div>
-                          <CardTitle className="text-2xl lg:text-3xl text-forest-deep mb-2">
+                          <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-forest-deep mb-1 lg:mb-2">
                             {partner.title}
                           </CardTitle>
-                          <p className="text-lg font-semibold text-primary">
+                          <p className="text-base sm:text-lg font-semibold text-primary">
                             {partner.subtitle}
                           </p>
                         </div>
                       </div>
                       
-                      <Badge variant="secondary" className="text-sm px-4 py-2">
+                      <Badge variant="secondary" className="text-xs sm:text-sm px-3 lg:px-4 py-1 lg:py-2">
                         Partnership Track {index + 1}
                       </Badge>
                     </div>
                   </CardHeader>
                   
-                  <CardContent className="space-y-6">
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                  <CardContent className="space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-8 pt-0">
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {partner.description}
                     </p>
                     
                     <div>
-                      <h4 className="font-semibold text-forest-deep mb-4 text-lg">
+                      <h4 className="font-semibold text-forest-deep mb-3 lg:mb-4 text-base sm:text-lg">
                         Distinct Benefits:
                       </h4>
-                      <div className="grid md:grid-cols-2 gap-3">
+                      <div className="grid md:grid-cols-2 gap-2 lg:gap-3">
                         {partner.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-start gap-3">
-                            <Badge variant="secondary" className="mt-1 shrink-0">
+                          <div key={benefitIndex} className="flex items-start gap-2 lg:gap-3">
+                            <Badge variant="secondary" className="mt-0.5 lg:mt-1 shrink-0 text-xs">
                               ✓
                             </Badge>
-                            <span className="text-muted-foreground text-sm">
+                            <span className="text-muted-foreground text-xs sm:text-sm">
                               <strong>{benefit.split(':')[0]}:</strong>
                               {benefit.split(':').slice(1).join(':')}
                             </span>
@@ -260,13 +260,14 @@ const Partnerships = () => {
                       </div>
                     </div>
                     
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-wrap gap-2 lg:gap-4 pt-2 lg:pt-4">
                       {partner.ctas.map((cta, ctaIndex) => (
                         <Button 
                           key={ctaIndex}
                           variant={ctaIndex === 0 ? "default" : "outline"} 
                           size="lg" 
                           asChild
+                          className="text-sm lg:text-base"
                         >
                           <Link to={cta.link}>{cta.text}</Link>
                         </Button>
@@ -281,70 +282,70 @@ const Partnerships = () => {
       </section>
 
       {/* Partnership Process */}
-      <section className="py-20 bg-forest-light/20">
+      <section className="py-8 sm:py-12 lg:py-16 bg-forest-light/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               How Partnership Works
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               We believe great partnerships begin with great conversations. 
               Our collaborative approach ensures every project creates meaningful value for all stakeholders.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <Card className="text-center hover:shadow-soft transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-foreground">1</span>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                  <span className="text-lg lg:text-2xl font-bold text-primary-foreground">1</span>
                 </div>
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Initial Conversation
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm sm:text-base">
                   We discuss your goals, values, and vision for collaboration
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-soft transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-foreground">2</span>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                  <span className="text-lg lg:text-2xl font-bold text-primary-foreground">2</span>
                 </div>
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Custom Proposal
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm sm:text-base">
                   We develop a tailored partnership proposal that maximizes impact
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-soft transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-foreground">3</span>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                  <span className="text-lg lg:text-2xl font-bold text-primary-foreground">3</span>
                 </div>
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Collaborative Creation
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm sm:text-base">
                   Together we bring stories to life through co-creation and expertise sharing
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-soft transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-foreground">4</span>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
+                  <span className="text-lg lg:text-2xl font-bold text-primary-foreground">4</span>
                 </div>
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Shared Impact
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm sm:text-base">
                   We measure and celebrate the cultural, educational, and conservation outcomes
                 </p>
               </CardContent>
@@ -354,27 +355,27 @@ const Partnerships = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-forest-deep text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-forest-deep text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <Sparkles className="h-16 w-16 text-gold-warm mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <Sparkles className="h-12 sm:h-14 lg:h-16 w-12 sm:w-14 lg:w-16 text-gold-warm mx-auto mb-4 lg:mb-6" />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6">
               Ready to Create Magic Together?
             </h2>
-            <p className="text-xl text-ivory/90 mb-12">
+            <p className="text-lg sm:text-xl text-ivory/90 mb-8 lg:mb-12">
               Every partnership is unique, just like every story we tell. Let's explore 
               how we can work together to create cultural experiences that inspire action, 
               preserve heritage, and protect our natural world.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Button variant="warm" size="xl" asChild>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 lg:gap-6 justify-center">
+              <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/contact">Start Your Partnership Journey</Link>
               </Button>
-              <Button variant="magical" size="xl" asChild>
+              <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/contact">Schedule a Discovery Call</Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+              <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep w-full sm:w-auto" asChild>
                 <Link to="/get-involved">Join Our Community First</Link>
               </Button>
             </div>

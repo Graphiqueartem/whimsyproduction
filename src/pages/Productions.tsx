@@ -81,22 +81,22 @@ const Productions = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
             Where Folklore Meets the Screen
           </h1>
-          <p className="text-xl text-ivory/90 max-w-4xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-6 lg:mb-8">
             Whimsy Films' productions are unlike anything else in today's media landscape. 
             We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals 
             to create timeless stories that feel magical, tactile, and emotionally real.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild>
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
               <Link to="#approach">Explore Our Storytelling Approach</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild>
+            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
               <Link to="#slate">Register for Updates</Link>
             </Button>
           </div>
@@ -104,62 +104,62 @@ const Productions = () => {
       </section>
 
       {/* Production Highlights */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 lg:py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-forest-deep mb-6">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
               Innovation Meets Tradition
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Our unique approach blends the timeless appeal of traditional storytelling 
               with cutting-edge production techniques.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-8">
-                <Camera className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Camera className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Wildlife Cinematography
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                   Capturing the raw wonder of the natural world
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-8">
-                <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Heart className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Puppetry & Practical Artistry
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                   Timeless, tactile, beloved by children
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-8">
-                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Users className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   Live Action & Human Performance
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                   Authentic, emotional, deeply relatable
                 </p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-magical transition-all duration-300 transform hover:scale-105">
-              <CardContent className="p-8">
-                <Sparkles className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-forest-deep mb-3">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Sparkles className="h-8 sm:h-10 lg:h-12 w-8 sm:w-10 lg:w-12 text-primary mx-auto mb-3 lg:mb-4" />
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-forest-deep mb-2 lg:mb-3">
                   AI-enhanced Visuals & Innovation
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                   Expanding creative possibilities
                 </p>
               </CardContent>
