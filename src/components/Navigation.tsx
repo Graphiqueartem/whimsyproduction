@@ -83,58 +83,54 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/95 border-b border-border shadow-soft">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between gap-4 max-w-[1400px] mx-auto">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border shadow-soft">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6 max-w-full">
+        <div className="flex h-14 items-center justify-between gap-2">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
-            <div className="text-2xl sm:text-3xl font-bold text-forest-deep hover:text-primary transition-colors">
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="text-2xl font-bold text-forest-deep">
               Whimsy<span className="text-gold-warm">Films</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex flex-1 justify-center">
+          <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList className="flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
-                    <>
-                      <NavigationMenuTrigger 
-                        className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 px-3 py-2"
-                        asChild
-                      >
-                        <Link to={item.href || `/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <div className="relative">
+                      <Link to={item.href || `/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <NavigationMenuTrigger className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                           {item.title}
-                        </Link>
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto">
-                        <div className="grid gap-2 p-6 w-80 bg-background border border-border shadow-magical rounded-xl">
+                        </NavigationMenuTrigger>
+                      </Link>
+                      <NavigationMenuContent className="absolute top-full left-0 mt-1 z-50">
+                        <div className="grid gap-1 p-3 w-64 bg-background border border-border shadow-lg rounded-md">
                           {item.items.map((subItem) => (
                             <NavigationMenuLink key={subItem.href} asChild>
                               <Link
                                 to={subItem.href}
-                                className="block select-none rounded-lg p-3 text-sm font-medium leading-snug no-underline outline-none transition-all duration-200 hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary text-foreground"
+                                className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               >
-                                <div className="font-semibold">{subItem.title}</div>
+                                {subItem.title}
                               </Link>
                             </NavigationMenuLink>
                           ))}
                         </div>
                       </NavigationMenuContent>
-                    </>
+                    </div>
                   ) : (
-                    <NavigationMenuLink asChild>
-                      <Link 
-                        to={item.href}
+                    <Link to={item.href}>
+                      <NavigationMenuLink
                         className={cn(
-                          "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                          "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50",
                           location.pathname === item.href && "bg-accent/50"
                         )}
                       >
                         {item.title}
-                      </Link>
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
+                    </Link>
                   )}
                 </NavigationMenuItem>
               ))}
@@ -142,22 +138,22 @@ const Navigation = () => {
           </NavigationMenu>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex flex-shrink-0 ml-4">
-            <Button variant="hero" size="sm" className="text-sm px-5 py-2 whitespace-nowrap font-semibold min-w-[140px]" asChild>
+          <div className="hidden md:flex">
+            <Button variant="hero" size="sm" className="text-xs px-3 py-1.5 whitespace-nowrap" asChild>
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
           </div>
 
           {/* Mobile menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden ml-2">
-              <Button variant="ghost" size="icon" className="flex-shrink-0">
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 overflow-y-auto bg-background border-l border-border">
-              <div className="flex flex-col space-y-1 mt-8 px-4">
+            <SheetContent side="right" className="w-80 overflow-y-auto">
+              <div className="flex flex-col space-y-2 mt-8 px-2">
                 {navigationItems.map((item) => (
                   <div key={item.title}>
                     {item.items ? (
@@ -165,24 +161,19 @@ const Navigation = () => {
                         open={openDropdowns.includes(item.title)}
                         onOpenChange={() => toggleDropdown(item.title)}
                       >
-                        <CollapsibleTrigger asChild>
-                          <Link 
-                            to={item.href}
-                            className="flex items-center justify-between w-full font-semibold text-forest-deep py-3 px-2 hover:text-primary hover:bg-accent/50 rounded-md transition-colors"
-                          >
-                            {item.title}
-                            <ChevronDown className={cn(
-                              "h-4 w-4 transition-transform duration-200",
-                              openDropdowns.includes(item.title) && "rotate-180"
-                            )} />
-                          </Link>
+                        <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-forest-deep py-2 hover:text-primary transition-colors">
+                          {item.title}
+                          <ChevronDown className={cn(
+                            "h-4 w-4 transition-transform duration-200",
+                            openDropdowns.includes(item.title) && "rotate-180"
+                          )} />
                         </CollapsibleTrigger>
-                        <CollapsibleContent className="pl-6 space-y-1 pb-2">
+                        <CollapsibleContent className="pl-4 space-y-1 pb-2">
                           {item.items.map((subItem) => (
                             <Link
                               key={subItem.href}
                               to={subItem.href}
-                              className="block text-sm text-muted-foreground hover:text-foreground hover:bg-accent/30 rounded-md py-2 px-3 transition-colors"
+                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
                               onClick={() => setIsOpen(false)}
                             >
                               {subItem.title}
@@ -193,7 +184,7 @@ const Navigation = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className="block font-medium text-foreground hover:text-primary hover:bg-accent/50 rounded-md py-3 px-2 transition-colors"
+                        className="block font-medium text-foreground hover:text-primary transition-colors py-2"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.title}
@@ -201,7 +192,7 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-6 mt-4 border-t border-border">
+                <div className="pt-4 border-t border-border">
                   <Button variant="hero" size="default" className="w-full" asChild>
                     <Link to="/partnerships" onClick={() => setIsOpen(false)}>
                       Partner With Us

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import Section from "@/components/layouts/Section";
 
 const ProductionSection = () => {
   return (
-    <Section background="gradient-warm" padding="large">
-      <div className="grid lg:grid-cols-2 gap-16 items-center max-w-[1200px] mx-auto">
+    <section className="py-16 bg-gradient-warm">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-3xl sm:text-4xl font-bold text-forest-deep">
               Our Production House
@@ -81,7 +81,8 @@ const ProductionSection = () => {
             </div>
           </div>
         </div>
-    </Section>
+      </div>
+    </section>
   );
 };
 

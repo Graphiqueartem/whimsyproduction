@@ -12,8 +12,6 @@ import {
   Sparkles,
   Leaf
 } from "lucide-react";
-import PageLayout from "@/components/layouts/PageLayout";
-import Section from "@/components/layouts/Section";
 import culturalPuppetryImage from "@/assets/cultural-puppetry.jpg";
 
 const About = () => {
@@ -49,18 +47,18 @@ const About = () => {
   ];
 
   return (
-    <PageLayout>
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <Section background="gradient-hero" padding="large">
-        <div className="text-center space-y-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+      <section className="py-4 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">
             A Global Studio With a Purpose
           </h1>
-          <p className="text-lg text-ivory/90 max-w-3xl mx-auto">
+          <p className="text-sm text-ivory/90 max-w-2xl mx-auto">
             More than a production house — we are a movement for cultural celebration and conservation.
           </p>
         </div>
-      </Section>
+      </section>
 
       {/* Wildlife Videos Section */}
       <section className="py-2 bg-background">
@@ -288,7 +286,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
+    </div>
   );
 };
 

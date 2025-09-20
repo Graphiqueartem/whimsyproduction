@@ -11,8 +11,6 @@ import {
   Lightbulb,
   TreePine
 } from "lucide-react";
-import PageLayout from "@/components/layouts/PageLayout";
-import Section from "@/components/layouts/Section";
 
 const Vision = () => {
   const values = [
@@ -44,19 +42,20 @@ const Vision = () => {
   ];
 
   return (
-    <PageLayout>
+    <div className="min-h-screen bg-background pt-14">
       {/* Hero Section */}
-      <Section background="gradient-hero" padding="large">
-        <div className="text-center space-y-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+      <section className="py-6 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Reimagining Stories, Inspiring Change
           </h1>
-          <p className="text-lg text-ivory/90 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-ivory/90 max-w-2xl mx-auto mb-4">
             Our vision extends far beyond entertainment — we create cultural experiences 
             that protect wildlife, celebrate heritage, and inspire global action.
           </p>
+          
         </div>
-      </Section>
+      </section>
 
       {/* Wildlife Videos Section */}
       <section className="py-4 bg-background">
@@ -308,7 +307,7 @@ const Vision = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
+    </div>
   );
 };
 

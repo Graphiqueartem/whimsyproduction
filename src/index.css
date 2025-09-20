@@ -67,16 +67,6 @@ All colors MUST be HSL.
     --transition-magical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --bounce-gentle: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Consistent Spacing */
-    --section-padding-y: 5rem;
-    --section-padding-x: 1rem;
-    --content-max-width: 1400px;
-    --element-gap: 2rem;
-
-    /* Layout consistency */
-    --header-height: 4rem;
-    --container-padding: 1.5rem;
-
     --sidebar-background: 40 50% 96%;
     --sidebar-foreground: 160 15% 25%;
     --sidebar-primary: 152 65% 25%;
@@ -133,25 +123,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    scroll-behavior: smooth;
-  }
-  
-  /* Ensure proper spacing and layout consistency */
-  .container {
-    max-width: var(--content-max-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-  }
-  
-  /* Remove default button focus styles that could interfere with custom styles */
-  button:focus {
-    outline: none;
-  }
-  
-  /* Smooth transitions for interactive elements */
-  a, button, [role="button"] {
-    transition: var(--transition-magical);
   }
 }
