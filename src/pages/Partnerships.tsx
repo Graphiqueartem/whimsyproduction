@@ -164,43 +164,52 @@ const Partnerships = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
+      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Partnerships That Matter
           </h1>
-          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-4 lg:mb-6">
+          <p className="text-sm sm:text-base text-ivory/90 max-w-3xl mx-auto mb-3 lg:mb-4">
             At Whimsy Films, transformation happens when vision meets collaboration. We are building 
             a movement powered by governments, NGOs, cultural institutions, and forward-thinking sponsors. 
             By partnering with us, you step into a global conversation about how culture and conservation 
             can work together to shape the future.
           </p>
           
-          <blockquote className="text-lg sm:text-2xl font-serif italic text-gold-warm mb-4 lg:mb-6">
+          <blockquote className="text-base sm:text-lg font-serif italic text-gold-warm mb-3 lg:mb-4">
             "Partnership turns vision into action—and action into legacy."
           </blockquote>
           
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
-              <Link to="/contact">Start a Conversation</Link>
+          <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 justify-center mb-4">
+            <Button variant="warm" size="default" asChild>
+              <Link to="#governments">Government Partners</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
-              <Link to="/contact">Request a Partnership Pack</Link>
+            <Button variant="magical" size="default" asChild>
+              <Link to="#ngos">NGO Partnerships</Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep w-full sm:w-auto" asChild>
-              <Link to="/contact">Book a Presentation & Lunch Meeting</Link>
-            </Button>
+          </div>
+          
+          {/* Praying Mantis Video */}
+          <div className="max-w-xl mx-auto">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-28 object-cover rounded-lg shadow-magical"
+            />
           </div>
         </div>
       </section>
 
       {/* Partnership Types */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-forest-deep mb-4 lg:mb-6">
+      <section className="py-8 sm:py-10 lg:py-12 bg-background">
+        <div className="container mx-auto px-2">
+          <div className="text-center mb-6 lg:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-forest-deep mb-3 lg:mb-4">
               Your Impact, Amplified
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">

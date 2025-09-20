@@ -79,26 +79,38 @@ const Productions = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
+      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Where Folklore Meets the Screen
           </h1>
-          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-6 lg:mb-8">
+          <p className="text-sm sm:text-base text-ivory/90 max-w-3xl mx-auto mb-4 lg:mb-6">
             Whimsy Films' productions are unlike anything else in today's media landscape. 
             We combine live action, puppetry, wildlife cinematography, and AI-enhanced visuals 
             to create timeless stories that feel magical, tactile, and emotionally real.
           </p>
           
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
-            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
+          <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 justify-center mb-4">
+            <Button variant="warm" size="default" asChild className="w-full sm:w-auto">
               <Link to="#approach">Explore Our Storytelling Approach</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
+            <Button variant="magical" size="default" asChild className="w-full sm:w-auto">
               <Link to="#slate">Register for Updates</Link>
             </Button>
+          </div>
+          
+          {/* Praying Mantis Video */}
+          <div className="max-w-xl mx-auto">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-28 object-cover rounded-lg shadow-magical"
+            />
           </div>
         </div>
       </section>

@@ -72,9 +72,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -82,31 +82,31 @@ const Index = () => {
           }}
         />
         
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div className="relative z-10 container mx-auto px-2 sm:px-4 lg:px-6 text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Where Storytelling
               <span className="block text-gold-warm">Inspires Action</span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-ivory/90 leading-relaxed max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl md:text-xl mb-4 sm:mb-6 text-ivory/90 leading-relaxed max-w-3xl mx-auto px-2">
               Whimsy Films is a global production house bringing folklore, wildlife, and magical 
               storytelling to life — to inspire children, empower communities, and protect our natural world.
             </p>
             
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
-              <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
+            <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 justify-center items-center mb-6 sm:mb-8 px-2">
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/partnerships">Partner With Us</Link>
               </Button>
-              <Button variant="warm" size="xl" asChild className="w-full sm:w-auto">
+              <Button variant="warm" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/vision">Discover Our Vision</Link>
               </Button>
-              <Button variant="magical" size="xl" asChild className="w-full sm:w-auto">
+              <Button variant="magical" size="lg" asChild className="w-full sm:w-auto">
                 <Link to="/get-involved">Join the Movement</Link>
               </Button>
             </div>
 
-            <div className="text-ivory/80 text-xs sm:text-sm uppercase tracking-wider px-4">
+            <div className="text-ivory/80 text-xs sm:text-sm uppercase tracking-wider px-2">
               Stories connect us. Culture inspires us. Together we protect our planet.
             </div>
           </div>
@@ -114,40 +114,40 @@ const Index = () => {
       </section>
 
       {/* Inspirational Quote Divider */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-forest">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif italic text-forest-deep max-w-4xl mx-auto leading-relaxed">
+      <section className="py-6 sm:py-8 lg:py-10 bg-gradient-forest">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-6 text-center">
+          <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-forest-deep max-w-4xl mx-auto leading-relaxed">
             "Every tradition is a story. Every story is a bridge to the future."
           </blockquote>
         </div>
       </section>
 
       {/* Expanded Intro Section */}
-      <section className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-            <div className="space-y-6 lg:space-y-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-forest-deep leading-tight">
+      <section className="py-8 sm:py-10 lg:py-12 bg-background">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+            <div className="space-y-4 lg:space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-forest-deep leading-tight">
                 Stories That Change the World
               </h2>
               
-              <div className="text-base sm:text-lg text-muted-foreground space-y-4 lg:space-y-6">
+              <div className="text-sm sm:text-base text-muted-foreground space-y-3 lg:space-y-4">
                 <p>At Whimsy Films, we see culture as a living archive of human imagination—and a tool for shaping a more sustainable tomorrow. Through film, exhibitions, festivals, and collaborations, we connect communities, governments, and cultural institutions.</p>
                 
                 <p>We do not just tell stories; we curate experiences that move audiences, spark conversations, and inspire change. By weaving together folklore and conservation, we make environmental action personal, emotional, and unforgettable.</p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
+                <Button variant="default" size="default" asChild className="w-full sm:w-auto">
                   <Link to="/partnerships">Explore Partnerships</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                <Button variant="outline" size="default" asChild className="w-full sm:w-auto">
                   <Link to="/get-involved">Register Your Interest</Link>
                 </Button>
               </div>
 
               {/* Wildlife Gallery */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-4 sm:pt-8">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video">
                   <img 
                     src={chimpanzeePortrait} 
@@ -165,36 +165,39 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="space-y-6 lg:space-y-8">
-              {/* Hero Wildlife Image */}
-              <div className="relative overflow-hidden rounded-lg aspect-video mb-6 lg:mb-8">
-                <img 
-                  src={turtleConservation} 
-                  alt="Ocean conservation - Sea turtle swimming with fish"
+            <div className="space-y-4 lg:space-y-6">
+              {/* Praying Mantis Video */}
+              <div className="relative overflow-hidden rounded-lg aspect-video mb-4 lg:mb-6">
+                <video 
+                  src="/src/assets/videos/praying-mantis.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent flex items-end">
-                  <div className="p-4 sm:p-6 text-white">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">Conservation Through Storytelling</h3>
-                    <p className="text-sm opacity-90">Protecting marine life through powerful narratives</p>
+                  <div className="p-3 sm:p-4 text-white">
+                    <h3 className="text-base sm:text-lg font-semibold mb-1">Wildlife in Focus</h3>
+                    <p className="text-xs opacity-90">Capturing nature's intricate beauty</p>
                   </div>
                 </div>
               </div>
 
               <Card className="border-0 shadow-soft bg-gradient-warm">
-                <CardContent className="p-6 lg:p-8">
-                  <h3 className="text-lg sm:text-xl font-semibold text-forest-deep mb-4 lg:mb-6">Our Mission</h3>
-                  <div className="space-y-3 sm:space-y-4 text-forest-deep/80 text-sm sm:text-base">
+                <CardContent className="p-4 lg:p-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-forest-deep mb-3 lg:mb-4">Our Mission</h3>
+                  <div className="space-y-2 sm:space-y-3 text-forest-deep/80 text-xs sm:text-sm">
                     <p>At Whimsy Films, we believe storytelling is humanity's oldest and most powerful tool. Stories have taught us who we are, connected us across cultures, and inspired generations to dream.</p>
                     <p>Today, stories must do more. They must remind us of our shared humanity, protect the fragile beauty of wildlife, and spark empathy in a divided world.</p>
                     <p>That is why Whimsy Films exists. We are a UK-based production company that creates films, series, and cultural experiences rooted in folklore and magical storytelling — designed not only to entertain but also to educate, conserve, and inspire global action.</p>
                   </div>
-                  <div className="mt-6 lg:mt-8 p-4 lg:p-6 bg-forest-deep/10 rounded-lg">
-                    <p className="text-forest-deep font-semibold text-center text-base sm:text-lg">
+                  <div className="mt-4 lg:mt-6 p-3 lg:p-4 bg-forest-deep/10 rounded-lg">
+                    <p className="text-forest-deep font-semibold text-center text-sm sm:text-base">
                       "We tell magical stories that protect nature and inspire generations."
                     </p>
                   </div>
-                  <div className="flex flex-col gap-2 sm:gap-3 mt-6 lg:mt-8">
+                  <div className="flex flex-col gap-2 mt-4 lg:mt-6">
                     <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
                       <Link to="/productions">Watch Our Films</Link>
                     </Button>

@@ -110,14 +110,45 @@ const Impact = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
+      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             Stories That Spark Real-World Change
           </h1>
-          <p className="text-lg sm:text-xl text-ivory/90 max-w-4xl mx-auto mb-4 lg:mb-6">
+          <p className="text-sm sm:text-base text-ivory/90 max-w-3xl mx-auto mb-3 lg:mb-4">
+            Every story we tell creates ripples of change. From protecting endangered species 
+            to preserving cultural heritage, our impact is measurable, meaningful, and lasting.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
+            <Button variant="warm" size="default" asChild>
+              <Link to="#conservation">Conservation Impact</Link>
+            </Button>
+            <Button variant="magical" size="default" asChild>
+              <Link to="#cultural">Cultural Impact</Link>
+            </Button>
+          </div>
+          
+          {/* Praying Mantis Video */}
+          <div className="max-w-xl mx-auto">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-28 object-cover rounded-lg shadow-magical"
+            />
+          </div>
+        </div>
+      </section>
+      
+      {/* Quote Section */}
+      <section className="py-8 bg-forest-deep text-white">
+        <div className="container mx-auto px-2 text-center">
+          <p className="text-base sm:text-lg text-ivory/90 max-w-3xl mx-auto mb-4">
             Every Whimsy Films project is designed with dual impact: to enchant audiences 
             and to make a measurable difference in cultural preservation, wildlife conservation, and education.
           </p>

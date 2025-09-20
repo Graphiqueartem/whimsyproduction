@@ -112,33 +112,33 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-hero text-white">
+      <section className="py-8 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
             Let's Create Magic Together
           </h1>
-          <p className="text-lg text-ivory/90 max-w-3xl mx-auto mb-6">
+          <p className="text-base text-ivory/90 max-w-2xl mx-auto mb-4">
             Every great partnership begins with a conversation. Whether you represent 
             a government, NGO, cultural organization, or are simply passionate about 
             our mission — we'd love to hear from you.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button variant="warm" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+            <Button variant="warm" size="default" asChild>
               <a href="#contact-form">Send Us a Message</a>
             </Button>
-            <Button variant="magical" size="lg" asChild>
+            <Button variant="magical" size="default" asChild>
               <a href="#partnership-info">Explore Partnerships</a>
             </Button>
           </div>
           
           {/* Cultural Images Row */}
-          <div className="grid grid-cols-3 gap-2 mt-8 max-w-2xl mx-auto">
-            <img src={culturalStory5} alt="Celtic storytelling tradition" className="w-full h-24 object-cover rounded-lg" />
-            <img src={culturalStory6} alt="Chinese opera performance" className="w-full h-24 object-cover rounded-lg" />
-            <img src={culturalStory7} alt="Indian classical dance" className="w-full h-24 object-cover rounded-lg" />
+          <div className="grid grid-cols-3 gap-2 mt-4 max-w-lg mx-auto">
+            <img src={culturalStory5} alt="Celtic storytelling tradition" className="w-full h-16 object-cover rounded-lg" />
+            <img src={culturalStory6} alt="Chinese opera performance" className="w-full h-16 object-cover rounded-lg" />
+            <img src={culturalStory7} alt="Indian classical dance" className="w-full h-16 object-cover rounded-lg" />
           </div>
         </div>
       </section>

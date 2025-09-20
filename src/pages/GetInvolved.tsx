@@ -101,43 +101,43 @@ const GetInvolved = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-hero text-white">
+      <section className="py-8 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
             Be Part of the Magic
           </h1>
-          <p className="text-lg text-ivory/90 max-w-3xl mx-auto mb-6">
+          <p className="text-base text-ivory/90 max-w-2xl mx-auto mb-4">
             Whimsy Films is building a global movement of storytellers, conservationists, 
             educators, and dreamers. You don't just watch our films — you help create them.
           </p>
           
-          <div className="bg-ivory/10 border border-ivory/20 rounded-xl p-6 max-w-2xl mx-auto mb-6">
-            <p className="text-xl font-serif italic text-gold-warm">
+          <div className="bg-ivory/10 border border-ivory/20 rounded-lg p-4 max-w-xl mx-auto mb-4">
+            <p className="text-base font-serif italic text-gold-warm">
               "This is more than film. More than folklore. More than puppetry. 
               This is a movement. A global journey where culture and creativity 
               unite to protect nature and inspire young minds. Will you join us?"
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-            <Button variant="warm" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
+            <Button variant="warm" size="default" asChild>
               <Link to="#organizations">Partner With Us</Link>
             </Button>
-            <Button variant="magical" size="lg" asChild>
+            <Button variant="magical" size="default" asChild>
               <Link to="#individuals">Join the Movement</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
+            <Button variant="outline" size="default" className="border-ivory text-ivory hover:bg-ivory hover:text-forest-deep" asChild>
               <Link to="#newsletter">Stay Connected</Link>
             </Button>
           </div>
           
           {/* Cultural Images Row */}
-          <div className="grid grid-cols-3 gap-2 max-w-lg mx-auto">
-            <img src={culturalStory1} alt="Traditional puppet theater" className="w-full h-20 object-cover rounded-lg" />
-            <img src={culturalStory2} alt="Shadow puppetry performance" className="w-full h-20 object-cover rounded-lg" />
-            <img src={culturalStory8} alt="Scandinavian folk traditions" className="w-full h-20 object-cover rounded-lg" />
+          <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
+            <img src={culturalStory1} alt="Traditional puppet theater" className="w-full h-16 object-cover rounded-lg" />
+            <img src={culturalStory2} alt="Shadow puppetry performance" className="w-full h-16 object-cover rounded-lg" />
+            <img src={culturalStory8} alt="Scandinavian folk traditions" className="w-full h-16 object-cover rounded-lg" />
           </div>
         </div>
       </section>

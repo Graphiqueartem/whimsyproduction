@@ -47,16 +47,28 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6">
+      <section className="py-8 sm:py-10 lg:py-12 bg-gradient-hero text-white">
+        <div className="container mx-auto px-2 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 lg:mb-4">
             A Global Studio With a Purpose
           </h1>
-          <p className="text-lg sm:text-xl text-ivory/90 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-ivory/90 max-w-2xl mx-auto mb-4">
             More than a production house — we are a movement for cultural celebration and conservation.
           </p>
+          
+          {/* Praying Mantis Video */}
+          <div className="max-w-xl mx-auto">
+            <video 
+              src="/src/assets/videos/praying-mantis.mp4"
+              autoPlay 
+              muted 
+              loop
+              playsInline
+              className="w-full h-28 object-cover rounded-lg shadow-magical"
+            />
+          </div>
         </div>
       </section>
 

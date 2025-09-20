@@ -105,33 +105,33 @@ const News = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-hero text-white">
+      <section className="py-8 bg-gradient-hero text-white">
         <div className="container mx-auto px-2 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
             News & Insights
           </h1>
-          <p className="text-lg text-ivory/90 max-w-2xl mx-auto mb-6">
+          <p className="text-base text-ivory/90 max-w-2xl mx-auto mb-4">
             Stay updated on our latest productions, partnerships, and impact stories. 
             Discover thought leadership on culture, conservation, and the power of storytelling.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-            <Button variant="warm" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-4">
+            <Button variant="warm" size="default" asChild>
               <Link to="#featured">Read Latest Stories</Link>
             </Button>
-            <Button variant="magical" size="lg" asChild>
+            <Button variant="magical" size="default" asChild>
               <Link to="#newsletter">Subscribe to Updates</Link>
             </Button>
           </div>
           
           {/* Cultural Images Row */}
-          <div className="grid grid-cols-4 gap-2 max-w-2xl mx-auto">
-            <img src={culturalStory3} alt="African storytelling ceremony" className="w-full h-16 object-cover rounded-md" />
-            <img src={culturalStory4} alt="Native American folklore" className="w-full h-16 object-cover rounded-md" />
-            <img src={culturalStory5} alt="Celtic traditions" className="w-full h-16 object-cover rounded-md" />
-            <img src={culturalStory6} alt="Chinese opera" className="w-full h-16 object-cover rounded-md" />
+          <div className="grid grid-cols-4 gap-2 max-w-lg mx-auto">
+            <img src={culturalStory3} alt="African storytelling ceremony" className="w-full h-12 object-cover rounded-md" />
+            <img src={culturalStory4} alt="Native American folklore" className="w-full h-12 object-cover rounded-md" />
+            <img src={culturalStory5} alt="Celtic traditions" className="w-full h-12 object-cover rounded-md" />
+            <img src={culturalStory6} alt="Chinese opera" className="w-full h-12 object-cover rounded-md" />
           </div>
         </div>
       </section>
