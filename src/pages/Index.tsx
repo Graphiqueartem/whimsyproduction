@@ -169,19 +169,29 @@ const Index = () => {
               {/* Wildlife Videos Section */}
               <div className="grid md:grid-cols-3 gap-2 mb-3">
                 <video 
-                  src="/src/assets/videos/praying-mantis.mp4"
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
                   autoPlay 
                   muted 
                   loop
                   playsInline
                   className="w-full h-24 object-cover rounded-lg shadow-soft"
                 />
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24">
-                  <p className="text-white text-xs text-center px-2">Snow Hill Nature<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
-                </div>
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24">
-                  <p className="text-white text-xs text-center px-2">Mountain River Aerial<br/><span className="text-xs opacity-75">(Video file too large)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-24 object-cover rounded-lg shadow-soft"
+                />
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-24 object-cover rounded-lg shadow-soft"
+                />
               </div>
 
               {/* Praying Mantis Video */}

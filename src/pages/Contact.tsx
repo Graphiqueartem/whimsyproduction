@@ -152,7 +152,7 @@ const Contact = () => {
             <div className="grid md:grid-cols-3 gap-4 mb-8">
               <div className="text-center">
                 <video 
-                  src="/src/assets/videos/praying-mantis.mp4"
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
                   autoPlay 
                   muted 
                   loop
@@ -162,15 +162,25 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground">Wildlife Conservation</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32 mb-2">
-                  <p className="text-white text-sm text-center px-2">Global Stories<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_the-horses-are-walking-in-the-grass-at-sunset_70189274.mov"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
+                />
                 <p className="text-sm text-muted-foreground">Cultural Heritage</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-32 mb-2">
-                  <p className="text-white text-sm text-center px-2">Partnership Magic<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-32 object-cover rounded-lg shadow-soft mb-2"
+                />
                 <p className="text-sm text-muted-foreground">Collaboration</p>
               </div>
             </div>

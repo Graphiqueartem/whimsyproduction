@@ -68,7 +68,7 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-2">
               <div className="text-center">
                 <video 
-                  src="/src/assets/videos/praying-mantis.mp4"
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
                   autoPlay 
                   muted 
                   loop
@@ -78,15 +78,25 @@ const About = () => {
                 <p className="text-xs text-muted-foreground">Wildlife Focus</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24 mb-1">
-                  <p className="text-white text-xs text-center px-2">Cultural Heritage<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
+                />
                 <p className="text-xs text-muted-foreground">Global Stories</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-24 mb-1">
-                  <p className="text-white text-xs text-center px-2">Creative Process<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-24 object-cover rounded-lg shadow-soft mb-1"
+                />
                 <p className="text-xs text-muted-foreground">Behind the Scenes</p>
               </div>
             </div>

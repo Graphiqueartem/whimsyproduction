@@ -99,14 +99,14 @@ const Navigation = () => {
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
-                    <>
+                    <div className="relative">
                       <Link to={item.href || `/${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
                         <NavigationMenuTrigger className="bg-transparent hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                           {item.title}
                         </NavigationMenuTrigger>
                       </Link>
-                      <NavigationMenuContent className="top-full mt-1">
-                        <div className="grid gap-1 p-2 w-56 bg-background border border-border shadow-lg rounded-md">
+                      <NavigationMenuContent className="absolute top-full left-0 mt-1 z-50">
+                        <div className="grid gap-1 p-3 w-64 bg-background border border-border shadow-lg rounded-md">
                           {item.items.map((subItem) => (
                             <NavigationMenuLink key={subItem.href} asChild>
                               <Link
@@ -119,7 +119,7 @@ const Navigation = () => {
                           ))}
                         </div>
                       </NavigationMenuContent>
-                    </>
+                    </div>
                   ) : (
                     <Link to={item.href}>
                       <NavigationMenuLink

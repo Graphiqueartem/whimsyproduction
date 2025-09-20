@@ -112,7 +112,7 @@ const Productions = () => {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="text-center">
                 <video 
-                  src="/src/assets/videos/praying-mantis.mp4"
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_mantis-or-praying-mantis-mantis-religiosa-the-green_8660552.mp4"
                   autoPlay 
                   muted 
                   loop
@@ -122,15 +122,25 @@ const Productions = () => {
                 <p className="text-sm text-muted-foreground">Nature Stories</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
-                  <p className="text-white text-sm text-center px-2">Folklore Magic<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_aerial-view-of-a-mountain-river-in-the-clouds_67163497-1.mp4"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
+                />
                 <p className="text-sm text-muted-foreground">Cultural Tales</p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-hero rounded-lg flex items-center justify-center h-40 mb-2">
-                  <p className="text-white text-sm text-center px-2">Global Cinema<br/><span className="text-xs opacity-75">(Coming Soon)</span></p>
-                </div>
+                <video 
+                  src="https://lovedancelive.org/wp-content/uploads/2025/09/vecteezy_zebra-on-green-screen_70196321.mov"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  className="w-full h-40 object-cover rounded-lg shadow-soft mb-2"
+                />
                 <p className="text-sm text-muted-foreground">International Reach</p>
               </div>
             </div>
