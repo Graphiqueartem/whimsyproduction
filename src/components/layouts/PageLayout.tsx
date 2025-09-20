@@ -7,8 +7,8 @@ interface PageLayoutProps {
 
 const PageLayout = ({ children, className = "" }: PageLayoutProps) => {
   return (
-    <div className={`min-h-screen bg-background pt-16 ${className}`}>
-      <div className="max-w-content mx-auto">
+    <div className={`min-h-screen bg-background pt-20 ${className}`}>
+      <div className="w-full">
         {children}
       </div>
     </div>

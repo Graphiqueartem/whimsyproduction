@@ -4,7 +4,7 @@ import heroMain from "@/assets/hero-main.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden mt-16">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -12,8 +12,8 @@ const HeroSection = () => {
         }}
       />
       
-      <div className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 text-center text-white">
-        <div className="max-w-5xl mx-auto space-y-8">
+      <div className="relative z-10 w-full px-6 sm:px-8 lg:px-12 text-center text-white">
+        <div className="max-w-6xl mx-auto space-y-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
             Where Storytelling
             <span className="block text-gold-warm">Inspires Action</span>
@@ -24,14 +24,14 @@ const HeroSection = () => {
             storytelling to life — to inspire children, empower communities, and protect our natural world.
           </p>
           
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center items-center pt-4">
-            <Button variant="hero" size="xl" asChild className="w-full sm:w-auto min-w-[200px]">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center items-center pt-4 max-w-4xl mx-auto">
+            <Button variant="hero" size="xl" asChild className="w-full sm:w-auto sm:min-w-[200px]">
               <Link to="/partnerships">Partner With Us</Link>
             </Button>
-            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto min-w-[200px]">
+            <Button variant="warm" size="xl" asChild className="w-full sm:w-auto sm:min-w-[200px]">
               <Link to="/vision">Discover Our Vision</Link>
             </Button>
-            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto min-w-[200px]">
+            <Button variant="magical" size="xl" asChild className="w-full sm:w-auto sm:min-w-[200px]">
               <Link to="/get-involved">Join the Movement</Link>
             </Button>
           </div>

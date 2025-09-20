@@ -42,9 +42,10 @@ const Section = ({
     <section className={cn(
       backgroundClasses[background],
       paddingClasses[padding],
+      "relative w-full overflow-hidden",
       className
     )}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
         <div className={spacingClasses[spacing]}>
           {children}
         </div>
